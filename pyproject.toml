@@ -1,5 +1,5 @@
 [project]
-name = "metadata"
+name = "delivery-metadata"
 version = "2025.1.0"
 authors = [
     {name="Mikael Hedblom", email="mikael.hedblom@smhi.se"},

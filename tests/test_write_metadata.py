@@ -1,12 +1,12 @@
-from metadata import Metadata
+from delivery_metadata import DeliveryMetadata
 
 
 def test_metadata_has_expected_fields():
     # Given a metadata object
-    metadata_object = Metadata()
+    metadata = DeliveryMetadata()
 
     # When looking at all available fields
-    metadata_fields = metadata_object.fields
+    metadata_fields = metadata.fields
 
     # Then they correspond to the expected fields
     orderered_expected_fields = (

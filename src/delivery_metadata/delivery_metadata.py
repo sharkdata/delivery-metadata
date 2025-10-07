@@ -1,4 +1,4 @@
-class Metadata:
+class DeliveryMetadata:
     _fields = (
         "datatype",
         "abstract",
