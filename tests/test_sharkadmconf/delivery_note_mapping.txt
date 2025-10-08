@@ -1,0 +1,13 @@
+short_key	synonyms
+MYEAR	provtagningsår
+DTYPE	datatyp
+RLABO	rapporterande institut
+REPORTING_DATE	rapporteringsdatum
+REPBY	kontaktperson
+FORMAT	format
+CHECKED_BY	data kontrollerad
+MPROG	övervakningsprogram
+ORDERER	beställare
+PROJ	projekt
+COMNT_DN	kommentarer
+STATUS	status

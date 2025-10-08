@@ -1,0 +1,120 @@
+cluster.table.column	PP_SUSE-BIOMAD	PP_UMSC-BIOMAD	PP_SMHI-BIOMAD	PP_SMHI	PP_UMSC	Cyano_UMSC	PP_SUSE	PP_REG	PP_PlanktonDB	HAB_SLV	IFCB
+dataset.reporting_institute_code							DELIVERER	RLABO	RLABO	RLABO	
+sample.method_comment									ANALYSISTYPE		
+sample.method_documentation	METDC			METDC	METDC	METDC	METDC	METDC	METDC	METDC	METDC
+sample.method_reference_code	REFSK	REFSK		REFSK	REFSK	REFSK	REFSK	REFSK	REFSK	REFSK	
+sample.monitoring_program_code	MPROG			MPROG	MPROG	MPROG	MPROG	MPROG		MPROG	MPROG
+sample.sample_orderer_code	ORDERER			ORDERER	ORDERER	ORDERER	ORDERER	ORDERER	ORDERER	ORDERER	ORDERER
+sample.plankton_sampling_method_code	PDMET	PDMET	PDMET	PDMET	PDMET	PDMET	PDMET	PDMET	PDMET		PDMET
+sample.sample_project_code	PROJ			PROJ	PROJ	PROJ	PROJ	PROJ	PROJ<or>PROJID	PROJ<or>PROJID	PROJ
+sample.sample_comment	COMNT_SMPL	COMNT_SAMP	COMNT	COMNT_SMP<or>COMNT_SAMP	COMNT_SMP	COMNT_SMP	COMNT_SAMP	COMNT_SMP<or>COMNT_SAMP		COMNT_SAMP	
+sample.sample_id	SMPNO	SMPNO	SMPNO	SMPNO	SMPNO	SMPNO	SMPNO	SMPNO	RPSNO	SMPNO	SMPNO
+sample.sample_max_depth_m	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MXDEP	MNDEP
+sample.sample_min_depth_m	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MNDEP	MXDEP
+sample.sample_series	SERNO	SERNO	SERNO	TRANS<or>SERNO<or>Series<or>SERIES	SERNO	SERNO	SERNO	SERNO<or>SERIES		SERNO<or>SERIES	
+sample.sample_time	STIME	STIME	STIME	SMPTIME<or>STIME	SMPTIME<or>STIME	STIME	STIME	SMPTIME<or>STIME	STIME	STIME	SAMPLE_TIME<or>STIME
+sample.sampled_volume_l	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	SMVOL	
+sample.sampler_type_code	SMTYP	SMTYP	SMTYP	SMTYP	SMTYP	SMTYP	SMTYP	SMTYP	BDMET	SMTYP	SMTYP
+sample.sampling_laboratory_accreditated				ACKR_SMP	ACKR_SMP		ACKR_SMP	ACKR_SMP		ACKR_SMP	ACKR_SMP
+sample.sampling_laboratory_code	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO	SLABO
+variable.QFLAG.Biovolume concentration							QFLAG			QFLAG	
+visit.secchi_depth_quality_flag							Q_SECCHI	Q_SECCHI			
+variable.analysis_date				ANADATE	ANADATE	ANADATE	ANADATE	ANADATE	ANALYSISDATE	ANADATE	ANADATE
+variable.analytical_laboratory_accreditated				ACKR_ANA	ACKR_ANA		ACKR_ANA	ACKR_ANA		ACKR_ANA	ACKR_ANA
+variable.analytical_laboratory_code	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO	ALABO
+variable.TEMP.add_to_variable_comment		COMNT									
+variable.coefficient	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF	COEFF
+variable.COPY_VARIABLE.# counted.ind/analysed sample fraction				COUNTNR<or>COUNT	COUNTNR<or>COUNT	COUNTNR<or>COUNT	COUNTNR<or>COUNT	COUNTNR<or>COUNT	CELLSCOUNTED<or>COUNT		COUNT
+variable.COPY_VARIABLE.# counted HAB.ind/analysed sample fraction										COUNTNR	
+variable.COPY_VARIABLE.Abundance class.class				ABUND_CLASS				OBSERVED<or>ABUND_CLASS<or>COUNT_CLASS	CONC (1-5)<or>CONC_CLASS (1-5)	ABUND_CLASS	
+variable.COPY_VARIABLE.Abundance class HAB.class											
+variable.COPY_VARIABLE.Abundance.ind/l or 100 um pieces/l	ABUND	ABUND	ABUND	Abundance cells/L<or>ABUND<or>CONC_IND_L-1<or>ABUND (c/l)	ABUND	ABUND (c/l)	ABUND	CONC_IND_L-1<or>ABUND<or>ABUND (c/l)	ABUND<or>HARMFUL_ALGAE_ABUND		ABUND_UNITS_PER_LITER<or>ABUND
+variable.COPY_VARIABLE.Abundance HAB.ind/l or 100 um pieces/l										CONC_IND_L-1<or>ABUND<or>ABUND (c/l)	
+variable.COPY_VARIABLE.Biovolume concentration.mm3/l				Total Biovolume mm3/L<or>Biovolume   mm3/L<or>Biovol-conc<or>Reported_Biovolume   mm3/L<or>BIOVOL<or>Reported_Biovolume   mm3/L	BIOVOL<or>mm3/L		Reported_Biovolume   mm3/L<or>BIOVOL<or>mm3/L	BIOVOLYM (mm3/l)<or>Biovol-conc<or>BIOVOL<or>BIOVOLYM			BIOVOL_PER_LITER<or>BIOVOL
+variable.COPY_VARIABLE.Carbon concentration.ugC/l				Total Phytoplankton Carbon ug C/L (Menden-Dauer & Lessard 2000)<or>Total Phytoplankton Carbon  ug C/L (Menden-Dauer & Lessard 2000)<or>Carbon-conc<or>Cell Carbon  ug C/L (Menden-Dauer & Lessard 2000)<or>Reported_Total Phytoplankton Carbon  ug C/L (Menden-Deuer & Lessard 2000)<or>Reported_Total Phytoplankton Carbon  µg C/L (Menden-Deuer & Lessard 2000)<or>C_CONC	C_CONC	mgC/m3	Reported_Total Phytoplankton Carbon  ug C/L (Menden-Deuer & Lessard 2000)<or>ug C/L<or>µgC/L	CARBON_CONC_ugC/l<or>Carbon-conc<or>CARBON_CONC<or>C_CONC			C_CONC_PER_LITER<or>C_CONC
+variable.COPY_VARIABLE_DIVIDE.Biovolume concentration.mm3/l.1000000000						BIOVOLYM (um3/l)		BIOVOLYM (um3/l)			
+variable.counter_program					COUNTPROG		COUNTPROG	COUNTPROG			
+variable.magnification	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	MAGNI	
+variable.mesh_size_um									MESHS	MESHS	
+variable.analysis_method_code				METOA	METOA		METOA	METOA		METOA	METOA
+variable.preservation_method_code	METFP	METFP	METFP	METFP	METFP	METFP	METFP	METFP	METPR	METFP	METFP
+variable.quality_flag	QFLAG	QFLAG	QFLAG	QFLAG	QFLAG	QFLAG	QFLAG	QFLAG		QFLAG	
+variable.reported_cell_volume_um3	CEVOL	CEVOL		BIOVOL<or>CEVOL<or>CVOL<or>PEG CELL VOLUME um3/cell<or>Cellvolym um3<or>Calculated  volume, um3<or>BIOVOL um3/cell<or>Reported_Cellvolym um3<or>BIOVOL µm3/cell<or>Reported_Cellvolym µm3	CEVOL	CEVOL	CEVOL<or>Reported_Cellvolym um3<or>CEVOL	BIOVOL um3/cell<or>CEVOL	ORIGINALCELLVOLUME	CEVOL<or>CVOL<or>PEG CELL VOLUME um3/cell<or>Cellvolym um3<or>Calculated  volume, um3<or>BIOVOL um3/cell<or>Reported_Cellvolym um3	
+variable.reported_scientific_name	LATNM	LATNM	LATNM	LATNM	LATNM	LATNM	LATNM	LATNM	LATNM	LATNM<or>PW LATNM	LATNM
+variable.sample_part_id									RPSNO		
+variable.sedimentation_time_h	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	SDTIM	
+variable.sedimentation_volume_ml	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	SDVOL	
+variable.size_class			SIZCO	SIZCL	SIZCL	SIZCL	SIZCL	SIZCL	SIZCL	SIZCL	
+variable.size_max_um				SIZCL_MAX				SIZCL_MAX<or>size_max_um			
+variable.size_min_um				SIZCL_MIN				SIZCL_MIN<or>size_min_um			
+variable.size_class_ref_list_code				SIZREF<or>SIZRF	SIZRF	SIZRF	SIZRF<or>SIZREF	SIZRF		SIZRF	
+variable.species_flag_code	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG	SFLAG
+variable.taxonomist	TAXNM	TAXNM	TAXNM	TAXNM	TAXNM	TAXNM	TAXNM	TAXNM	MICROSCOPEOPERATOR<or>TAXNM	TAXNM	
+variable.trophic_type_code	TRPHY	TRPHY	TRPHY	Trophy<or>TRPHY<or>TROPHY	TRPHY	TRPHY	TRPHY	TRPHY<or>TROPHY	TRPHY	TRPHY<or>TROPHY	TRPHY
+variable.variable_comment	COMNT	SIZECOMNT	COMNT	COMNT<or>COMNT_VAR	COMNT_VAR	COMNT_VAR	COMNT_VAR<or>COMNT	COMNT_VAR	BSCOM	COMNT_VAR	
+visit.air_pressure_hpa								AIRPRES			
+visit.air_temperature_degc							AIRTEMP	AIRTEMP			
+visit.cloud_observation_code				CLOUD	CLOUD		CLOUD	CLOUD		CLOUD	
+visit.cruise_start_serno					CRUISE_NO			CRUISE_NO	CRUIS	CRUIS	
+visit.expedition_id				EXPID	EXPID	EXPID	EXPID	EXPID		EXPID	
+visit.ice_observation_code				ICEOB	ICEOB		ICEOB	ICEOB		ICEOB	
+visit.monitoring_purpose_code				PURPM	PURPM	PURPM	PURPM	PURPM			
+visit.platform_code	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC	SHIPC
+visit.positioning_system_code	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS	POSYS
+visit.reported_station_name	STATN	STATN	STATN	STATN	STATN	STATN	STATN	STATN	STATN	STATN	STATN
+visit.secchi_depth_m					SECCHI		SECCHI	SECCHI			
+visit.monitoring_station_type_code		MSTAT	MSTAT	MSTAT	MSTAT		MSTAT	MSTAT			MSTAT
+visit.TEMP.expedition_comment							COMNT_EXP				
+visit.water_depth_m	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP	WADEP
+visit.water_land_station_type_code	WLTYP	WLTYP	WLTYP	WLTYP	WLTYP	WLTYP	WLTYP				
+visit.water_level_deviation_m									WATLD	WATLD	
+visit.wave_exposure_fetch									WAVXP	WAVXP	
+visit.wave_height_m				WAVHT			WAVHT		WAVHT	WAVHT	
+visit.wave_observation_code					WAVES			WAVES			
+visit.weather_observation_code				WEATH	WEATH		WEATH	WEATH		WEATH	
+visit.wind_direction_code				WINDR	WINDR<or>WINDIR		WINDR	WINDIR<or>WINDR		WINDR	
+visit.wind_speed_ms				WINSP	WINSP		WINSP	WINSP	WINSP	WINSP	
+visit.visit_comment	COMNT_SITE			COMNT_VISIT	COMNT_VISIT	COMNT_VISIT	COMNT_VISIT	COMNT_VISIT		COMNT_VISIT	
+visit.visit_date	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE	SDATE
+visit.visit_reported_latitude	LATIT	LATIT	LATIT	LATIT	LATIT	LAT_DM	LATIT	LATIT	LATIT	LATIT	LATIT
+visit.visit_reported_longitude	LONGI	LONGI	LONGI	LONGI	LONGI	LONG_DM	LONGI	LONGI	LONGI	LONGI	LONGI
+visit.latitude_deg					LAT_DEG<or>Latitude_deg						
+visit.latitude_min					Latitude_min<or>Latitude_mm						
+visit.longitude_deg					LONG_DEG<or>Longitude_deg						
+visit.longitude_min					Longitude_min<or>Longitude_mm						
+visit.visit_year	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR	MYEAR
+variable.replicate_no				REPLI_NO				REPLI_NO			
+variable.COPY_VARIABLE.Biovolume per sample.unknown_unit											BIOVOL_PER_SAMPLE
+variable.manual_qc_date											MANUAL_QC_DATE
+sample.pre_filter_size_um											PRE_FILTER_SIZE
+sample.training_set_annotated_by											TRAINING_SET_ANNOTATED_BY
+sample.classifier_created_by											CLASSIFIER_CREATED_BY
+sample.classifier_used											CLASSIFIER_USED
+sample.instrument_number											IFCBNO
+variable.reported_aphia_id											APHIA_ID
+variable.image_verification_status											IMAGE_VERIFICATION
+variable.classifier_taxon_name											CLASS_NAME
+variable.classifier_f1_score_percent											CLASS_F1
+variable.training_set											TRAINING_SET
+sample.sampled_volume_ml											SMVOL
+variable.COPY_VARIABLE.Unclassified Regions Of Interest - # counted .ROI/analysed sample											UNCLASSIFIED_COUNTS
+variable.COPY_VARIABLE.Unclassified Regions Of Interest - Abundance.ROI/L											UNCLASSIFIED_ABUNDANCE
+variable.COPY_VARIABLE.Unclassified Regions Of Interest - Volume.mm3/L											UNCLASSIFIED_BIOVOLUME<or>UNCLASSIFIED_VOLUME
+sample.ph_fb											PH_FB
+sample.chl_flu2_ug_l_fb											CHL_FB
+sample.cdom_ppb_fb											CDOM_FB
+sample.phyer_ug_l_fb											PHER_FB
+sample.waterflow_l_min_fb											WATERFLOW_FB
+sample.phycy_ug_l_fb											PHYC_FB
+sample.turb_ntu_fb											TURB_FB
+sample.pco2_ppm_fb											PCO2_FB
+sample.water_temp_deg_c_fb											TEMP_FB
+sample.psal_psu_fb											PSAL_FB
+sample.osat_percent_fb											OSAT_FB
+sample.doxy_ml_l_fb											DOXY_FB
+variable.image_instrument_flag											QFLAG
+sample.image_instrument_name											SAMPLING_PLATFORM
+variable.image_verified_by											VERIFIED_BY
+variable.associated_media											ASSOCIATED_MEDIA
+variable.classification_program_image											CLASSPROG<or>COUNTPROG
+variable.reported_scientific_name_species_flag											LATNM_SFLAG
