@@ -1,3 +1,9 @@
+from pathlib import Path
+from typing import Self
+
+from sharkadm.data import PolarsDataHolder, get_polars_data_holder
+
+
 class DeliveryMetadata:
     _fields = (
         "datatype",
@@ -33,6 +39,18 @@ class DeliveryMetadata:
         "citation",
     )
 
+    def __init__(self, data_holder: PolarsDataHolder | None = None):
+        self._data_holder = data_holder
+
+    @property
+    def data(self):
+        return self._data_holder.data
+
     @property
     def fields(self):
         return self._fields
+
+    @classmethod
+    def from_shark_package(cls, package_path: Path) -> Self:
+        sharkadm_dataholder = get_polars_data_holder(package_path)
+        return cls(data_holder=sharkadm_dataholder)

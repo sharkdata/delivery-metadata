@@ -7,7 +7,9 @@ authors = [
     {name = "Jonatan Skogsfors", email = "jonatan.skogsfors@smhi.se"},
 ]
 dependencies = [
+    "nodc-codes",
     "pyyaml>=6.0.3",
+    "sharkadm",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
@@ -22,10 +24,15 @@ dev = [
     "ruff>=0.13.1",
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
+    "polars>=1.34.0",
 ]
 
 [tool.uv]
 package = true
+
+[tool.uv.sources]
+sharkadm = { git = "https://github.com/nodc-sweden/SHARKadm" }
+nodc-codes = { git = "https://github.com/nodc-sweden/nodc-codes" }
 
 
 [tool.ruff]
