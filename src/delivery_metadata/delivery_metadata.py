@@ -47,6 +47,10 @@ class DeliveryMetadata:
         return self._data_holder.data
 
     @property
+    def delivery_note(self):
+        return self._data_holder.delivery_note.data
+
+    @property
     def fields(self):
         return self._fields
 
