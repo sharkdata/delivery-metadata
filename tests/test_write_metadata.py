@@ -1,4 +1,4 @@
-from delivery_metadata import DeliveryData
+from shark_metadata.delivery_data import DeliveryData
 
 
 def test_metadata_has_expected_fields():

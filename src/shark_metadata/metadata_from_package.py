@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 
-from delivery_metadata import DeliveryData
+from shark_metadata.delivery_data import DeliveryData
 
 
 @click.command()

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import polars as pl
 
-from delivery_metadata import DeliveryData
+from shark_metadata.delivery_data import DeliveryData
 
 
 def _write_data_to_package_folder(

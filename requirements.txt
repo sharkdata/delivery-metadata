@@ -64,7 +64,7 @@ click==8.3.0 \
     --hash=sha256:9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc \
     --hash=sha256:e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4
     # via
-    #   delivery-metadata
+    #   shark-metadata
     #   typer
 colorama==0.4.6 ; sys_platform == 'win32' \
     --hash=sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44 \
@@ -147,7 +147,7 @@ mdurl==0.1.2 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
     # via markdown-it-py
 nodc-codes @ git+https://github.com/nodc-sweden/nodc-codes@5e0a3f6a0900b3c34b9f8e0689f5c1daeb38ef9a
-    # via delivery-metadata
+    # via shark-metadata
 nodc-station @ git+https://github.com/nodc-sweden/nodc-station@e0cbf9cda7081f0edd7aa78330c35ea00dabb8bb
     # via sharkadm
 nodeenv==1.9.1 \
@@ -496,8 +496,8 @@ pyyaml==6.0.3 \
     --hash=sha256:f7057c9a337546edc7973c0d3ba84ddcdf0daa14533c2065749c9075001090e6 \
     --hash=sha256:fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0
     # via
-    #   delivery-metadata
     #   pre-commit
+    #   shark-metadata
     #   sharkadm
 requests==2.32.5 \
     --hash=sha256:2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6 \
@@ -585,7 +585,7 @@ shapely==2.1.2 \
     #   geopandas
     #   sharkadm
 sharkadm @ git+https://github.com/nodc-sweden/SHARKadm@7f9cc05006425e6a463e8ddc00df3d4ac9ab8606
-    # via delivery-metadata
+    # via shark-metadata
 shellingham==1.5.4 \
     --hash=sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686 \
     --hash=sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de
