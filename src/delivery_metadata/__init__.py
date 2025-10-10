@@ -1,1 +1,0 @@
-from delivery_metadata.delivery_data import DeliveryData

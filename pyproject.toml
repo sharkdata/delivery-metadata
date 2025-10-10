@@ -1,5 +1,5 @@
 [project]
-name = "delivery-metadata"
+name = "shark-metadata"
 version = "2025.1.0"
 authors = [
     {name="Mikael Hedblom", email="mikael.hedblom@smhi.se"},
@@ -18,7 +18,7 @@ license = {file = "LICENSE"}
 
 
 [project.scripts]
-metadata-from-package = "delivery_metadata.metadata_from_package:cli"
+metadata-from-package = "shark_metadata.metadata_from_package:cli"
 
 [dependency-groups]
 dev = [
