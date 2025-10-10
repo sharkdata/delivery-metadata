@@ -7,6 +7,7 @@ authors = [
     {name = "Jonatan Skogsfors", email = "jonatan.skogsfors@smhi.se"},
 ]
 dependencies = [
+    "click>=8.3.0",
     "nodc-codes",
     "pyyaml>=6.0.3",
     "sharkadm",
@@ -17,7 +18,7 @@ license = {file = "LICENSE"}
 
 
 [project.scripts]
-generate-text-from-yaml = "metadata.generate_text_file_from_yaml:main"
+metadata-from-package = "delivery_metadata.metadata_from_package:cli"
 
 [dependency-groups]
 dev = [

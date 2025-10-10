@@ -3,7 +3,7 @@ from pathlib import Path
 
 import polars as pl
 
-from delivery_metadata import DeliveryMetadata
+from delivery_metadata import DeliveryData
 
 
 def _write_data_to_package_folder(
@@ -48,7 +48,7 @@ def test_parse_unpacked_folder(
     )
 
     # When parsing data using path
-    metadata = DeliveryMetadata.from_shark_package(package_path)
+    metadata = DeliveryData.from_shark_package(package_path)
 
     # Then metadata holds data
     assert not metadata.data.is_empty()
@@ -92,7 +92,7 @@ def test_parse_zipped_folder(
     zipped_package_path = Path(shutil.make_archive(package_path, "zip", package_path))
 
     # When parsing data using path
-    metadata = DeliveryMetadata.from_shark_package(zipped_package_path)
+    metadata = DeliveryData.from_shark_package(zipped_package_path)
 
     # Then metadata holds data
     assert not metadata.data.is_empty()

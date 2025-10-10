@@ -1,12 +1,14 @@
-from delivery_metadata import DeliveryMetadata
+from delivery_metadata import DeliveryData
 
 
 def test_metadata_has_expected_fields():
-    # Given a metadata object
-    metadata = DeliveryMetadata()
+    given_delivery_note_data = {"DTYPE": "Phytoplankton"}
+
+    # Given a delivery data object
+    delivery_data = DeliveryData(delivery_note=given_delivery_note_data)
 
     # When looking at all available fields
-    metadata_fields = metadata.fields
+    metadata = delivery_data.generate_metadata()
 
     # Then they correspond to the expected fields
     orderered_expected_fields = (
@@ -43,4 +45,4 @@ def test_metadata_has_expected_fields():
         "citation",
     )
 
-    assert metadata_fields == orderered_expected_fields
+    assert set(metadata.keys()) == set(orderered_expected_fields)
