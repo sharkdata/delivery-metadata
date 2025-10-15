@@ -1,0 +1,223 @@
+
+shark:
+  default:
+    default:
+      en:
+        - url: "http://shark.smhi.se/"
+          description: "SHARK är Svenskt HavsARKivs webbplats för nedladdning av data."
+          title: "SHARK"
+        - url: "https://shark.smhi.se/api/docs/"
+          description: "SHARK API är Svenskt HavsARKivs API för avancerad nedladdning av data."
+          title: "SHARK API"
+gbif:
+  NAT:
+    zoobenthos:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-zoobenthos-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    zooplankton:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-zooplankton-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    greyseal:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-greyseal-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    harbourseal:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-harbourseal-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    bacterioplankton:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-bacterioplankton-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    epibenthos:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-epibenthos-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    phytoplankton:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-phytoplankton-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    picoplankton:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-picoplankton"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    ringedseal:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-ringedseal-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    sealpathology:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-sealpathology"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    jellyfish:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-jellyfish-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    harbourporpoise:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=shark-harbour-porpoise-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+  REG_PROJ:
+    epibenthos:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-epibenthos-reg"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+  REG_RECIP_PROJ:
+    phytoplankton:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-phytoplankton-reg"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+    zoobenthos:
+      en:
+        - url: "http://www.gbif.se/ipt/resource?r=smhi-zoobenthos-reg"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
+scifilab:
+  PROJ:
+    planktonimaging:
+      en:
+        - url: "http://doi.org/10.17044/scilifelab.25883455"
+          description: "Science for Life Laboratory i samarbete med Figshare. Här finns samtliga manuellt annoterade bilder."
+          title: "SciLifeLab Data Repository"
+ecotaxa:
+  PROJ:
+    planktonimaging:
+      en:
+        - url: "https://ecotaxa.obs-vlfr.fr/prj/822"
+          description: "Här finns alla manuellt annoterade bilder från Östersjön"
+          title: "EcoTaxa"
+        - url: "https://ecotaxa.obs-vlfr.fr/prj/14392"
+          description: "Här finns alla manuellt annoterade bilder från Kattegat och Skagerrak"
+          title: "EcoTaxa"
+        - url: "https://ecotaxa.obs-vlfr.fr/prj/899"
+          description: "Här finns alla manuellt annoterade bilder från Tångesund"
+          title: "EcoTaxa"
+    ADCP:
+      en:
+        - url: ""
+          description: ""
+          title: ""
+        - url: ""
+          description: ""
+          title: ""
+smhi_open_data:
+  NAT:
+    bacterioplankton:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-bakterioplankton-i-sverige-sedan-1989
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-bakterioplankton-i-sverige-sedan-1989
+    chlorophyll:
+      en: >
+      sv: >
+    phytoplankton:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vaxtplankton-i-sverige-sedan-1983
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vaxtplankton-i-sverige-sedan-1983
+    picoplankton:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-picoplankton-i-sverige-sedan-2002
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-picoplankton-i-sverige-sedan-2002
+    primaryproduction:
+      en: >
+      sv: >
+    epibenthos:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vegetationskladda-bottnar-sedan-1992
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vegetationskladda-bottnar-sedan-1992
+    jellyfish:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-gel-plankton-i-sverige-sedan-2007
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-gel-plankton-i-sverige-sedan-2007
+    zoobenthos:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-mjukbottenfauna-i-sverige-sedan-1971
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-mjukbottenfauna-i-sverige-sedan-1971
+    zooplankton:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-djurplankton-i-sverige-sedan-1979
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-djurplankton-i-sverige-sedan-1979
+    physicalchemical:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-fysiska-och-kemiska-parametrar-i-sverige-sedan-1893
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-fysiska-och-kemiska-parametrar-i-sverige-sedan-1893
+    profile:
+      en: >
+      sv: >
+    greyseal:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-grasal-i-sverige-sedan-1989
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-grasal-i-sverige-sedan-1989
+    harbourseal:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-knubbsal-i-sverige-sedan-1988
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-knubbsal-i-sverige-sedan-1988
+    ringedseal:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vikare-i-sverige-sedan-1995
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-vikare-i-sverige-sedan-1995
+    sealpathology:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-patologi-hos-sal-i-sverige
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-patologi-hos-sal-i-sverige
+    harbourporpoise:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-tumlare-i-sverige
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-nationell-marin-miljoovervakning-av-tumlare-i-sverige
+  REG_PROJ:
+    epibenthos:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-samt-andra-overvakningsprojekt-av-vegetationskladda-bottnar-i-sverige-sedan-1994
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-samt-andra-overvakningsprojekt-av-vegetationskladda-bottnar-i-sverige-sedan-1994
+  REG_RECIP_PROJ:
+    phytoplankton:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-recipientkontroll-samt-andra-overvakningsprojekt-av-vaxtplankton-i-sverige-sedan-1985
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-recipientkontroll-samt-andra-overvakningsprojekt-av-vaxtplankton-i-sverige-sedan-1985
+    zoobenthos:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-recipientkontroll-samt-andra-overvakningsprojekt-av-mjukbottenfauna-i-sverige-sedan-1972
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-regional-marin-miljoovervakning-recipientkontroll-samt-andra-overvakningsprojekt-av-mjukbottenfauna-i-sverige-sedan-1972
+  PROJ:
+    planktonimaging: 
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-vaxt-och-mikrodjurplanktondata-insamlad-med-imaging-flowcytobots-ifcb-i-svenska-och-narliggande-vatten
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-vaxt-och-mikrodjurplanktondata-insamlad-med-imaging-flowcytobots-ifcb-i-svenska-och-narliggande-vatten
+    ADCP:
+      en: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-havsstromsdata-insamlad-med-skeppsmonterad-acoustic-doppler-current-profiler-adcp-i-svenska-och-angransande-vatten
+      sv: >
+        https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-havsstromsdata-insamlad-med-skeppsmonterad-acoustic-doppler-current-profiler-adcp-i-svenska-och-angransande-vatten
+
