@@ -1,3 +1,4 @@
+from functools import cache
 from importlib import resources
 from pathlib import Path
 from typing import Callable, Self
@@ -15,29 +16,27 @@ def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
     return function(dataframe[column])
 
 
-def _load_all_yaml() -> dict:
-    resource = resources.files(__package__) / "metadata_config"
-    data = {}
-    for file in Path(resource).glob("*.yaml"):
-        key = file.stem
-        with open(file, encoding="utf-8") as f:
-            data[key] = yaml.safe_load(f)
-    return data
+@cache
+def _load_yaml(filename: str) -> dict:
+    resource = Path(resources.files(__package__)) / "metadata_config" / f"{filename}.yaml"
+    if Path(resource).exists():
+        with open(resource, encoding="utf-8") as f:
+            return yaml.safe_load(f)
+    else:
+        return {}
 
 
-STATIC_METADATA = _load_all_yaml()
-
-
-def get_static_metadata(metadata: dict, keys: list, lang: str = "en"):
+def get_static_metadata(filename: str, keys: list, lang: str = "en"):
+    metadata = _load_yaml(filename)
     for key in keys:
         if not isinstance(metadata, dict):
-            return None
+            return "NA"
         metadata = metadata.get(key) or metadata.get("default")
         if metadata is None:
-            return None
+            return "NA"
     if not isinstance(metadata, dict):
-        return None
-    return metadata.get(lang)
+        return "NA"
+    return metadata.get(lang, "NA")
 
 
 class DeliveryData:
@@ -114,34 +113,34 @@ class DeliveryData:
                 "delivery_datatype", self.datatype
             ),  # lista om metadata för flera paket från olika datatyper
             "monitoring_program": get_static_metadata(
-                STATIC_METADATA, ["monitoring_program", self.monitoring_program], "en"
+                "monitoring_program", [self.monitoring_program], "en"
             ),  # lista om metadata skrivs för flera paket.
             "method_description": get_static_metadata(
-                STATIC_METADATA,
-                ["methods", self.monitoring_program, self.datatype.lower()],
+                "methods",
+                [self.monitoring_program, self.datatype.lower()],
                 "en",
             ),
             "dataset_filename": self._source,  # lista om metadata skrivs för flera paket.
             "keywords": get_static_metadata(
-                STATIC_METADATA,
-                ["keywords", self.monitoring_program, self.datatype.lower(), "gcmd"],
+                "keywords",
+                [self.monitoring_program, self.datatype.lower(), "gcmd"],
                 "en",
             ),
             "measuring_area_type": get_static_metadata(
-                STATIC_METADATA,
-                ["misc", "measuring_area_type", self.datatype.lower()],
+                "misc",
+                ["measuring_area_type", self.datatype.lower()],
                 "en",
             ),  # point, polygon, transect, annat namn?
             "coordinate_system": get_static_metadata(
-                STATIC_METADATA,
-                ["misc", "coordinate_system", self.datatype.lower()],
+                "misc",
+                ["coordinate_system", self.datatype.lower()],
                 "en",
             ),  # alltid wgs84
             "platform_class": get_static_metadata(
-                STATIC_METADATA, ["misc", "platform_class", self.datatype.lower()], "en"
+                "misc", ["platform_class", self.datatype.lower()], "en"
             ),
             "license": get_static_metadata(
-                STATIC_METADATA, ["misc", "license", self.datatype.lower()], "en"
+                "misc", ["license", self.datatype.lower()], "en"
             ),  # license.yaml, flyttat till misc
             "min_year": _apply_on_column(min, "visit_year", self._data),
             "max_year": _apply_on_column(max, "visit_year", self._data),
@@ -165,8 +164,8 @@ class DeliveryData:
                     "LABO", self.originator
                 ),
                 "contact": get_static_metadata(
-                    STATIC_METADATA,
-                    ["originator_contact", self.originator, self.datatype],
+                    "originator_contact",
+                    [self.originator, self.datatype],
                     "en",
                 ),
             },  # lista med flera dicts om flera datapaket läses.
@@ -175,41 +174,41 @@ class DeliveryData:
             ),
             "data_holding_centre": {
                 "name": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "name"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "name"],
                 ),
                 "address": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "address"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "address"],
                 ),
                 "postal_code": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "postal_code"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "postal_code"],
                 ),
                 "city": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "city"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "city"],
                 ),
                 "phone": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "phone"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "phone"],
                 ),
                 "email": get_static_metadata(
-                    STATIC_METADATA,
-                    ["misc", "data_holding_centre", self.datatype.lower(), "email"],
+                    "misc",
+                    ["data_holding_centre", self.datatype.lower(), "email"],
                 ),
             },
             "database_reference": get_static_metadata(
-                STATIC_METADATA,
-                ["misc", "database_reference", self.datatype.lower()],
+                "misc",
+                ["database_reference", self.datatype.lower()],
             ),
             "internet_access": get_static_metadata(
-                STATIC_METADATA,
-                ["url_linkage", "shark", self.monitoring_program, self.datatype.lower()],
+                "url_linkage",
+                ["shark", self.monitoring_program, self.datatype.lower()],
             )[0]["url"],  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
             "citation": get_static_metadata(
-                STATIC_METADATA,
-                ["misc", "citation", self.datatype.lower()],
+                "misc",
+                ["citation", self.datatype.lower()],
             ).format(originator=self.originator, project=self.monitoring_program),
         }
 
