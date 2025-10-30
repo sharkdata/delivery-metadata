@@ -1,7 +1,13 @@
 import json
 
-from shark_metadata.delivery_data import get_static_metadata
+from shark_metadata.delivery_data import get_static_metadata, get_static_metadata
 
+def test_get_new():
+    result = get_static_metadata(
+                    "misc",
+                    ["data_holding_centre", "smhi"])
+    print(result)
+    assert result == "NA"
 
 def test_get_default_when_missing_given_key():
     result = get_static_metadata(

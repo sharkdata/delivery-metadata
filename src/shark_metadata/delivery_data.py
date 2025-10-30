@@ -16,6 +16,19 @@ def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
     return function(dataframe[column])
 
 
+def _apply_on_columns(function: Callable, columns: list, dataframe: pl.DataFrame):
+    if not all(col in dataframe.columns for col in columns):
+        return None
+    return function(dataframe.select(columns))
+
+
+def build_parameter_unit_mapping(sub_df: pl.DataFrame):
+    result = (
+        sub_df.group_by("parameter").agg(pl.col("unit").unique()).to_dict(as_series=False)
+    )
+    return {p: u for p, u in zip(result["parameter"], result["unit"])}
+
+
 @cache
 def _load_yaml(filename: str) -> dict:
     resource = Path(resources.files(__package__)) / "metadata_config" / f"{filename}.yaml"
@@ -26,17 +39,48 @@ def _load_yaml(filename: str) -> dict:
         return {}
 
 
+def restructure_by_language(filename: str) -> dict:
+    """
+    Restructure the nested metadata dict so that 'en' and 'sv' become the top-level keys.
+
+    Example:
+        Input:
+            {'NATL': {'bacterioplankton': {'en': 'text', 'sv': 'text'}}}
+        Output:
+            {'en': {'NATL': {'bacterioplankton': 'text'}},
+             'sv': {'NATL': {'bacterioplankton': 'text'}}}
+    """
+    data = _load_yaml(filename)
+    result = defaultdict(lambda: defaultdict(dict))
+
+    def walk(node, path):
+        if isinstance(node, dict):
+            langs = {"en", "sv"} & node.keys()  # find intersection
+            if langs:
+                for lang in langs:
+                    # navigate to the correct nested location in result[lang]
+                    d = result[lang]
+                    for key in path[:-1]:
+                        d = d.setdefault(key, {})
+                    d[path[-1]] = node[lang]
+            else:
+                for k, v in node.items():
+                    walk(v, [*path, k])
+
+    walk(data, [])
+
+    return {lang: dict(result[lang]) for lang in result}
+
+
 def get_static_metadata(filename: str, keys: list, lang: str = "en"):
-    metadata = _load_yaml(filename)
-    for key in keys:
-        if not isinstance(metadata, dict):
-            return "NA"
-        metadata = metadata.get(key) or metadata.get("default")
-        if metadata is None:
-            return "NA"
-    if not isinstance(metadata, dict):
-        return "NA"
-    return metadata.get(lang, "NA")
+    metadata = restructure_by_language(filename)
+    if metadata.get(lang):
+        metadata = metadata.get(lang)
+        for key in keys:
+            metadata = metadata.get(key) or metadata.get("default")
+            if metadata is None:
+                return "NA"
+    return metadata
 
 
 class DeliveryData:
@@ -89,7 +133,7 @@ class DeliveryData:
 
     @property
     def datatype(self):
-        return self.delivery_note.get("DTYPE", "")
+        return self.delivery_note.get("DTYPE") or self.delivery_note.get("DATA_FORMAT")
 
     @property
     def monitoring_program(self):
@@ -105,9 +149,15 @@ class DeliveryData:
     def fields(self):
         return self._fields
 
+    def generate_readme(self):
+        return get_static_metadata(
+            "readme",
+            ["default"],
+            "en",
+        )
+
     def generate_metadata(self):
         print("\n".join(sorted(self._data.columns)))
-        print(self.delivery_note)
         return {
             "datatype": get_translate_codes_object().get_english_name(
                 "delivery_datatype", self.datatype
@@ -142,22 +192,25 @@ class DeliveryData:
             "license": get_static_metadata(
                 "misc", ["license", self.datatype.lower()], "en"
             ),  # license.yaml, flyttat till misc
-            "min_year": _apply_on_column(min, "visit_year", self._data),
-            "max_year": _apply_on_column(max, "visit_year", self._data),
-            "min_date": _apply_on_column(min, "sample_date", self._data),
-            "max_date": _apply_on_column(max, "sample_date", self._data),
-            "min_longitude_dd": _apply_on_column(min, "sample_longitude_dd", self._data),
-            "max_longitude_dd": _apply_on_column(max, "sample_longitude_dd", self._data),
-            "min_latitude_dd": _apply_on_column(min, "sample_latitude_dd", self._data),
-            "max_latitude_dd": _apply_on_column(max, "sample_latitude_dd", self._data),
+            "min_year": _apply_on_column(min, "visit_year", self.data),
+            "max_year": _apply_on_column(max, "visit_year", self.data),
+            "min_date": _apply_on_column(min, "sample_date", self.data),
+            "max_date": _apply_on_column(max, "sample_date", self.data),
+            "min_longitude_dd": _apply_on_column(min, "sample_longitude_dd", self.data),
+            "max_longitude_dd": _apply_on_column(max, "sample_longitude_dd", self.data),
+            "min_latitude_dd": _apply_on_column(min, "sample_latitude_dd", self.data),
+            "max_latitude_dd": _apply_on_column(max, "sample_latitude_dd", self.data),
+            # Which transformer to get station_name without synonyms, i.e. not reported_?
             "stations": _apply_on_column(
-                lambda s: s.unique().to_list(), "station_name", self._data
+                lambda s: s.unique().to_list(), "reported_station_name", self.data
             ),
-            "parameters": _apply_on_column(
-                lambda s: s.unique().to_list(), "parameter", self._data
+            "parameters": _apply_on_columns(
+                build_parameter_unit_mapping, ["parameter", "unit"], self.data
             ),
+            # Do we need a transformer to get the column scientific_name?
+            # Do we want reported or a transformed column?
             "taxonomic_coverage": _apply_on_column(
-                lambda s: s.unique().to_list(), "scientific_name", self._data
+                lambda s: s.unique().to_list(), "reported_scientific_name", self.data
             ),
             "originator": {
                 "name": get_translate_codes_object().get_english_name(
@@ -170,34 +223,11 @@ class DeliveryData:
                 ),
             },  # lista med flera dicts om flera datapaket läses.
             "orderer": get_translate_codes_object().get_english_name(
-                "LABO", self.delivery_note.get("ORDERER", "sample_orderer_code")
+                "LABO", self.delivery_note.get("sample_orderer_code", "Not specified")
             ),
-            "data_holding_centre": {
-                "name": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "name"],
-                ),
-                "address": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "address"],
-                ),
-                "postal_code": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "postal_code"],
-                ),
-                "city": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "city"],
-                ),
-                "phone": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "phone"],
-                ),
-                "email": get_static_metadata(
-                    "misc",
-                    ["data_holding_centre", self.datatype.lower(), "email"],
-                ),
-            },
+            "data_holding_centre": get_static_metadata(
+                "misc", ["data_holding_centre", "smhi"]
+            ),
             "database_reference": get_static_metadata(
                 "misc",
                 ["database_reference", self.datatype.lower()],
@@ -209,7 +239,12 @@ class DeliveryData:
             "citation": get_static_metadata(
                 "misc",
                 ["citation", self.datatype.lower()],
-            ).format(originator=self.originator, project=self.monitoring_program),
+            ).format(
+                originator=self.originator,
+                project=get_translate_codes_object().get_english_name(
+                    "project", self.monitoring_program
+                ),
+            ),
         }
 
     @classmethod
