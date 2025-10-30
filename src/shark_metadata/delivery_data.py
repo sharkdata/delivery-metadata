@@ -1,3 +1,4 @@
+from collections import defaultdict
 from functools import cache
 from importlib import resources
 from pathlib import Path
@@ -6,7 +7,9 @@ from typing import Callable, Self
 import polars as pl
 import yaml
 from nodc_codes import get_translate_codes_object
-from sharkadm.data import get_polars_data_holder
+from sharkadm import controller as sharkadm_controller
+from sharkadm import multi_transformers, transformers
+from sharkadm.sharkadm_logger import adm_logger
 
 
 def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
@@ -249,7 +252,21 @@ class DeliveryData:
 
     @classmethod
     def from_shark_package(cls, package_path: Path) -> Self:
-        sharkadm_dataholder = get_polars_data_holder(package_path)
+        adm_logger.print_on_screen()
+        controller = sharkadm_controller.get_polars_controller_with_data(package_path)
+        print(f"\t\t{controller.data_holder.data.columns=}")
+        print(f"\t\t{controller.data_holder.data_structure=}")
+        for transformer, args, kwargs in (
+            (transformers.PolarsReplaceCommaWithDot, (), {}),
+            (multi_transformers.DateTimePolars, (), {}),
+            (multi_transformers.PositionPolars, (), {}),
+            (transformers.PolarsWideToLong, (), {}),
+            (transformers.PolarsRemoveColumns, ("COPY_VARIABLE.*",), {}),
+            # (transformers.AddStationInfo, (), {}), # uses pandas
+        ):
+            controller.transform(transformer(*args, **kwargs))
+
+        sharkadm_dataholder = controller.data_holder
         return cls(
             data=sharkadm_dataholder.data,
             delivery_note=sharkadm_dataholder.delivery_note.data,

@@ -32,8 +32,8 @@ dev = [
 package = true
 
 [tool.uv.sources]
-sharkadm = { git = "https://github.com/nodc-sweden/SHARKadm" }
 nodc-codes = { git = "https://github.com/nodc-sweden/nodc-codes/", tag = "v2.0.0" }
+sharkadm = { git = "https://github.com/nodc-sweden/SHARKadm", rev = "polars_archive_dataholders" }
 
 
 [tool.ruff]
