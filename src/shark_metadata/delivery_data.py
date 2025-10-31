@@ -174,7 +174,7 @@ class DeliveryData:
                 "en",
             ),
             "dataset_filename": self._source,  # lista om metadata skrivs för flera paket.
-            "keywords": get_static_metadata(
+            "gcmd_science_keywords": get_static_metadata(
                 "keywords",
                 [self.monitoring_program, self.datatype.lower(), "gcmd"],
                 "en",
