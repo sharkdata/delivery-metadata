@@ -2,7 +2,7 @@ from shark_metadata.delivery_data import DeliveryData
 
 
 def test_metadata_has_expected_fields():
-    given_delivery_note_data = {"DTYPE": "Phytoplankton"}
+    given_delivery_note_data = {"DTYPE": "Phytoplankton", "ORDERER": "HAV"}
 
     # Given a delivery data object
     delivery_data = DeliveryData(delivery_note=given_delivery_note_data)
@@ -13,14 +13,14 @@ def test_metadata_has_expected_fields():
     # Then they correspond to the expected fields
     orderered_expected_fields = (
         "datatype",
-        "abstract",
-        "description",
+        "monitoring_program",
         "dataset_filename",
-        "discipline",
+        "keywords",
+        "method_description",
         "measuring_area_type",
         "coordinate_system",
         "platform_class",
-        "access_constraints",
+        "license",
         "min_year",
         "max_year",
         "min_date",
@@ -29,19 +29,14 @@ def test_metadata_has_expected_fields():
         "max_longitude_dd",
         "min_latitude_dd",
         "max_latitude_dd",
+        "stations",
+        "parameters",
         "taxonomic_coverage",
         "originator",
-        "contact",
         "orderer",
         "data_holding_centre",
-        "data distributor",
         "database_reference",
         "internet_access",
-        "address",
-        "postal_code",
-        "city",
-        "phone",
-        "email",
         "citation",
     )
 

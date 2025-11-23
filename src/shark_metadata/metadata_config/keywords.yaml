@@ -1,0 +1,208 @@
+# Metadata for Swedish marine environmental monitoring datasets.
+# Repository: https://github.com/sharkdata/metadata
+
+
+NATL:
+  default:
+    gcmd:
+      en: 
+        - "Oceans > Marine Environment Monitoring"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+  bacterioplankton:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  chlorophyll:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  epibenthos:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Plants"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Plants"
+  greyseal:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+  harbourporpoise:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+  harbourseal:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+  phytoplankton:
+    gcmd:
+      en:
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  picoplankton:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  primaryproduction:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  profile:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Ocean Temperature"
+        - "Oceans > Salinity/density"
+        - "Oceans > Ocean Optics"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Ocean Temperature"
+        - "Oceans > Salinity/density"
+        - "Oceans > Ocean Optics"
+  ringedseal:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+  sealpathology:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Biology > Marine Mammals"
+  sedimentation:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Marine Sediments > Particle Flux"
+        - "Oceans > Marine Sediments > Sedimentation"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Marine Sediments > Particle Flux"
+        - "Oceans > Marine Sediments > Sedimentation"
+  physicalchemical:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Ocean Chemistry > Nutrients"
+        - "Oceans > Ocean Chemistry > Oxygen"
+        - "Oceans > Ocean Temperature > Water Temperature"
+        - "Oceans > Salinity/density > Density"
+        - "Oceans > Salinity/density > Salinity"
+        - "Oceans > Ocean Optics > Secchi Depth"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Ocean Chemistry > Nutrients"
+        - "Oceans > Ocean Chemistry > Oxygen"
+        - "Oceans > Ocean Temperature > Water Temperature"
+        - "Oceans > Salinity/density > Density"
+        - "Oceans > Salinity/density > Salinity"
+        - "Oceans > Ocean Optics > Secchi Depth"
+  zoobenthos:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Invertebrates"
+        - "Oceans > Marine Sediments"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Sediments"
+  zooplankton:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Invertebrates"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+        - "Oceans > Marine Invertebrates"
+PROJ:
+  default:
+    gcmd:
+      en: 
+        - "Oceans > Marine Environment Monitoring"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+  planktonimaging:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Marine Biology"
+  ADCP:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Ocean Circulation"
+        - "Oceans > Ocean Circulation > Ocean Currents"
+        - "Oceans > Ocean Circulation > Ocean Currents > Current Profiles"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Ocean Circulation"
+        - "Oceans > Ocean Circulation > Ocean Currents"
+        - "Oceans > Ocean Circulation > Ocean Currents > Current Profiles"
