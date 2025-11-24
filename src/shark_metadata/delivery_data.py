@@ -1,3 +1,4 @@
+import pathlib
 from collections import defaultdict
 from functools import cache
 from importlib import resources
@@ -7,9 +8,6 @@ from typing import Callable, Self
 import polars as pl
 import yaml
 from nodc_codes import get_translate_codes_object
-from sharkadm import controller as sharkadm_controller
-from sharkadm import multi_transformers, transformers
-from sharkadm.sharkadm_logger import adm_logger
 
 
 def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
@@ -119,12 +117,42 @@ class DeliveryData:
     def __init__(
         self,
         data: pl.DataFrame | None = None,
-        delivery_note: dict | None = None,
-        source: str = "",
+        path: str = "",
     ):
         self._data = pl.DataFrame() if data is None else data
-        self._delivery_note = delivery_note or {}
-        self._source = source
+        self.path = path
+        self._delivery_note(path)
+
+    def _delivery_note(
+        self,
+        path: str | pathlib.Path,
+        encoding: str = "cp1252",
+    ):
+        if "processed_data" not in [p for p in path.parent.iterdir() if p.is_dir()]:
+            delivery_path = path.parent / "processed_data" / "delivery_note.txt"
+
+        if not delivery_path.is_file():
+            msg = f"File is not a valid delivery_note text file: {delivery_path}"
+            raise FileNotFoundError(msg)
+
+        data = dict()
+        with open(delivery_path, encoding=encoding) as fid:
+            mapped_key = None
+            for line in fid:
+                if not line.strip():
+                    continue
+                if ":" not in line:
+                    # Belongs to previous row
+                    data[mapped_key] = f"{data[mapped_key]} {line.strip()}"
+                    continue
+                key, value = [item.strip() for item in line.split(":", 1)]
+                key = key.lstrip("- ")
+                data[key] = value
+                if key.upper() == "FORMAT":
+                    parts = [item.strip() for item in value.split(":")]
+                    data["data_format"] = parts[0]
+
+        self._delivery_note = data
 
     @property
     def data(self):
@@ -135,18 +163,33 @@ class DeliveryData:
         return self._delivery_note
 
     @property
-    def datatype(self):
-        return self.delivery_note.get("DTYPE") or self.delivery_note.get("DATA_FORMAT")
+    def version(self):
+        print(str(self.path.parent))
+        return str(self.path.parent).split("/")[-1].split("_")[-1]
 
     @property
-    def monitoring_program(self):
-        return self.delivery_note.get("MPROG") or self.delivery_note.get(
-            "monitoring_program_code"
-        )
+    def datatype(self):
+        return self.data["delivery_datatype"].unique().to_list()
+
+    @property
+    def project(self):
+        return self.data["sample_project_name_en"].unique().to_list()
+
+    @property
+    def monitoring_program_code(self):
+        return self.delivery_note.get("övervakningsprogram", "NA")
 
     @property
     def originator(self):
-        return self.delivery_note.get("RLABO", "")
+        return self.data["reporting_institute_name_en"].unique().to_list()
+
+    @property
+    def orderer(self):
+        return self.data["sample_orderer_name_en"].unique().to_list()
+
+    @property
+    def dataset_name(self):
+        return self.data["dataset_name"].unique().to_list()
 
     @property
     def fields(self):
@@ -161,51 +204,92 @@ class DeliveryData:
 
     def generate_metadata(self):
         print("\n".join(sorted(self._data.columns)))
+        print(self.project)
         return {
+            "dataset_filename": self.dataset_name[
+                0
+            ],  # lista om metadata skrivs för flera paket.
+            "version": self.version,
             "datatype": get_translate_codes_object().get_english_name(
-                "delivery_datatype", self.datatype
+                "delivery_datatype", self.datatype[0]
             ),  # lista om metadata för flera paket från olika datatyper
             "monitoring_program": get_static_metadata(
-                "monitoring_program", [self.monitoring_program], "en"
+                "monitoring_program", [self.monitoring_program_code], "en"
             ),  # lista om metadata skrivs för flera paket.
             "method_description": get_static_metadata(
                 "methods",
-                [self.monitoring_program, self.datatype.lower()],
+                [self.monitoring_program_code, self.datatype[0].lower().replace(" ", "")],
                 "en",
             ),
-            "dataset_filename": self._source,  # lista om metadata skrivs för flera paket.
+            "originator": {
+                "name": get_translate_codes_object().get_english_name(
+                    "LABO", self.originator[0]
+                ),
+                "contact": get_static_metadata(
+                    "originator_contact",
+                    [
+                        get_translate_codes_object().get_internal_value(
+                            "LABO", self.originator[0]
+                        ),
+                        self.datatype[0],
+                    ],
+                    "en",
+                ),
+            },  # lista med flera dicts om flera datapaket läses.
+            "orderer": get_translate_codes_object().get_english_name(
+                "LABO", self.orderer[0]
+            ),
+            "data_holding_centre": get_static_metadata(
+                "misc", ["data_holding_centre", "smhi"]
+            ),
+            "database_reference": get_static_metadata(
+                "misc",
+                ["database_reference", self.datatype[0].lower()],
+            ),
+            "internet_access": get_static_metadata(
+                "url_linkage",
+                ["shark", self.project[0], self.datatype[0].lower()],
+            )[0]["url"],  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
+            "license": get_static_metadata(
+                "misc", ["license", self.datatype[0].lower()], "en"
+            ),  # license.yaml, flyttat till misc
+            "citation": get_static_metadata(
+                "misc",
+                ["citation", self.datatype[0].lower()],
+            ).format(
+                originator=self.originator[0],
+                project=get_translate_codes_object().get_english_name(
+                    "project", self.project[0]
+                ),
+            ),
             "gcmd_science_keywords": get_static_metadata(
                 "keywords",
-                [self.monitoring_program, self.datatype.lower(), "gcmd"],
+                [self.monitoring_program_code, self.datatype[0].lower(), "gcmd"],
                 "en",
             ),
             "measuring_area_type": get_static_metadata(
                 "misc",
-                ["measuring_area_type", self.datatype.lower()],
+                ["measuring_area_type", self.datatype[0].lower()],
                 "en",
             ),  # point, polygon, transect, annat namn?
             "coordinate_system": get_static_metadata(
                 "misc",
-                ["coordinate_system", self.datatype.lower()],
+                ["coordinate_system", self.datatype[0].lower()],
                 "en",
             ),  # alltid wgs84
-            "platform_class": get_static_metadata(
-                "misc", ["platform_class", self.datatype.lower()], "en"
-            ),
-            "license": get_static_metadata(
-                "misc", ["license", self.datatype.lower()], "en"
-            ),  # license.yaml, flyttat till misc
-            "min_year": _apply_on_column(min, "visit_year", self.data),
-            "max_year": _apply_on_column(max, "visit_year", self.data),
-            "min_date": _apply_on_column(min, "sample_date", self.data),
-            "max_date": _apply_on_column(max, "sample_date", self.data),
             "min_longitude_dd": _apply_on_column(min, "sample_longitude_dd", self.data),
             "max_longitude_dd": _apply_on_column(max, "sample_longitude_dd", self.data),
             "min_latitude_dd": _apply_on_column(min, "sample_latitude_dd", self.data),
             "max_latitude_dd": _apply_on_column(max, "sample_latitude_dd", self.data),
-            # Which transformer to get station_name without synonyms, i.e. not reported_?
+            "min_year": _apply_on_column(min, "visit_year", self.data),
+            "max_year": _apply_on_column(max, "visit_year", self.data),
+            "min_date": _apply_on_column(min, "sample_date", self.data),
+            "max_date": _apply_on_column(max, "sample_date", self.data),
             "stations": _apply_on_column(
-                lambda s: s.unique().to_list(), "reported_station_name", self.data
+                lambda s: s.unique().to_list(), "station_name", self.data
+            ),
+            "platform_class": get_static_metadata(
+                "misc", ["platform_class", self.datatype[0].lower()], "en"
             ),
             "parameters": _apply_on_columns(
                 build_parameter_unit_mapping, ["parameter", "unit"], self.data
@@ -213,62 +297,16 @@ class DeliveryData:
             # Do we need a transformer to get the column scientific_name?
             # Do we want reported or a transformed column?
             "taxonomic_coverage": _apply_on_column(
-                lambda s: s.unique().to_list(), "reported_scientific_name", self.data
-            ),
-            "originator": {
-                "name": get_translate_codes_object().get_english_name(
-                    "LABO", self.originator
-                ),
-                "contact": get_static_metadata(
-                    "originator_contact",
-                    [self.originator, self.datatype],
-                    "en",
-                ),
-            },  # lista med flera dicts om flera datapaket läses.
-            "orderer": get_translate_codes_object().get_english_name(
-                "LABO", self.delivery_note.get("sample_orderer_code", "Not specified")
-            ),
-            "data_holding_centre": get_static_metadata(
-                "misc", ["data_holding_centre", "smhi"]
-            ),
-            "database_reference": get_static_metadata(
-                "misc",
-                ["database_reference", self.datatype.lower()],
-            ),
-            "internet_access": get_static_metadata(
-                "url_linkage",
-                ["shark", self.monitoring_program, self.datatype.lower()],
-            )[0]["url"],  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
-            "citation": get_static_metadata(
-                "misc",
-                ["citation", self.datatype.lower()],
-            ).format(
-                originator=self.originator,
-                project=get_translate_codes_object().get_english_name(
-                    "project", self.monitoring_program
-                ),
+                lambda s: s.unique().to_list(), "scientific_name", self.data
             ),
         }
 
     @classmethod
-    def from_shark_package(cls, package_path: Path) -> Self:
-        adm_logger.print_on_screen()
-        controller = sharkadm_controller.get_polars_controller_with_data(package_path)
-        print(f"\t\t{controller.data_holder.data.columns=}")
-        print(f"\t\t{controller.data_holder.data_structure=}")
-        for transformer, args, kwargs in (
-            (transformers.PolarsReplaceCommaWithDot, (), {}),
-            (multi_transformers.DateTimePolars, (), {}),
-            (multi_transformers.PositionPolars, (), {}),
-            (transformers.PolarsWideToLong, (), {}),
-            (transformers.PolarsRemoveColumns, ("COPY_VARIABLE.*",), {}),
-            # (transformers.AddStationInfo, (), {}), # uses pandas
-        ):
-            controller.transform(transformer(*args, **kwargs))
-
-        sharkadm_dataholder = controller.data_holder
+    def from_path(cls, package_path: Path) -> Self:
+        data = pl.read_csv(
+            package_path, encoding="cp1252", separator="\t", infer_schema_length=10000
+        )
         return cls(
-            data=sharkadm_dataholder.data,
-            delivery_note=sharkadm_dataholder.delivery_note.data,
-            source=package_path.name,
+            data=data,
+            path=package_path,
         )
