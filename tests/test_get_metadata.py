@@ -1,4 +1,3 @@
-
 from shark_metadata.delivery_data import get_static_metadata
 
 

@@ -10,7 +10,6 @@ dependencies = [
     "click>=8.3.0",
     "nodc-codes",
     "pyyaml>=6.0.3",
-    "sharkadm",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
@@ -33,7 +32,6 @@ package = true
 
 [tool.uv.sources]
 nodc-codes = { git = "https://github.com/nodc-sweden/nodc-codes/", tag = "v2.0.0" }
-sharkadm = { git = "https://github.com/nodc-sweden/SHARKadm", rev = "polars_archive_dataholders" }
 
 
 [tool.ruff]
