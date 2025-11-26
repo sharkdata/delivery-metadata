@@ -186,6 +186,18 @@ NATL:
       
       - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
       - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
+REG:
+  physicalchemical:
+    en: |
+      Oceanographic, physical and chemical data from water samples. Collected with bottle or CTD at discrete depths. Data should be sampled and analyzed according HELCOM Monitoring Guidelines. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+      
+      - https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
+      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.htmlhtml
+    sv: |
+      Data samlas in och analyseras enligt HELCOM Guidelines. Data samlas in med vattenhämtare och CTD. Vilka parametrar som analyseras varierar med plats och tid, som utgångspunkt finns salthalt, temperatur, syre och näringsämnen. Ytterligare parametrar som ofta förekommer är klorofyll, pH och alkalinitet. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats.
+      
+      - HELCOM Monitoring Guidelines: https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
+      - Vägledning från Havs- och vattenmyndigheten: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.html
 NAT_REG:
   picoplankton:
     en: |

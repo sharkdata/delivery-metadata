@@ -121,9 +121,9 @@ class DeliveryData:
     ):
         self._data = pl.DataFrame() if data is None else data
         self.path = path
-        self._delivery_note(path)
+        self._read_delivery_note(path)
 
-    def _delivery_note(
+    def _read_delivery_note(
         self,
         path: str | pathlib.Path,
         encoding: str = "cp1252",
@@ -169,7 +169,8 @@ class DeliveryData:
 
     @property
     def datatype(self):
-        return self.data["delivery_datatype"].unique().to_list()
+        dt = self.data["delivery_datatype"].unique().to_list()[0].replace(" and ", "")
+        return dt.lower()
 
     @property
     def project(self):
@@ -211,14 +212,14 @@ class DeliveryData:
             ],  # lista om metadata skrivs för flera paket.
             "version": self.version,
             "datatype": get_translate_codes_object().get_english_name(
-                "delivery_datatype", self.datatype[0]
+                "delivery_datatype", self.datatype
             ),  # lista om metadata för flera paket från olika datatyper
             "monitoring_program": get_static_metadata(
                 "monitoring_program", [self.monitoring_program_code], "en"
             ),  # lista om metadata skrivs för flera paket.
             "method_description": get_static_metadata(
                 "methods",
-                [self.monitoring_program_code, self.datatype[0].lower().replace(" ", "")],
+                [self.monitoring_program_code, self.datatype],
                 "en",
             ),
             "originator": {

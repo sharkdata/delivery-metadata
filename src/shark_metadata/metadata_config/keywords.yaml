@@ -2,6 +2,33 @@
 # Repository: https://github.com/sharkdata/metadata
 
 
+default:
+  default:
+    gcmd:
+      en: 
+        - "Oceans > Marine Environment Monitoring"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+  physicalchemical:
+    gcmd:
+      en:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Ocean Chemistry > Nutrients"
+        - "Oceans > Ocean Chemistry > Oxygen"
+        - "Oceans > Ocean Temperature > Water Temperature"
+        - "Oceans > Salinity/density > Density"
+        - "Oceans > Salinity/density > Salinity"
+        - "Oceans > Ocean Optics > Secchi Depth"
+      sv:  
+        - "Oceans > Marine Environment Monitoring"
+        - "Oceans > Chemistry"
+        - "Oceans > Ocean Chemistry > Nutrients"
+        - "Oceans > Ocean Chemistry > Oxygen"
+        - "Oceans > Ocean Temperature > Water Temperature"
+        - "Oceans > Salinity/density > Density"
+        - "Oceans > Salinity/density > Salinity"
+        - "Oceans > Ocean Optics > Secchi Depth"
 NATL:
   default:
     gcmd:
