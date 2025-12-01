@@ -1,13 +1,14 @@
-import pathlib
 from collections import defaultdict
 from functools import cache
 from importlib import resources
 from pathlib import Path
-from typing import Callable, Self
+from typing import Callable
 
 import polars as pl
 import yaml
 from nodc_codes import get_translate_codes_object
+
+from shark_metadata import errors
 
 
 def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
@@ -40,7 +41,7 @@ def _load_yaml(filename: str) -> dict:
         return {}
 
 
-def restructure_by_language(filename: str) -> dict:
+def restructure_by_language(data: dict) -> dict:
     """
     Restructure the nested metadata dict so that 'en' and 'sv' become the top-level keys.
 
@@ -51,7 +52,6 @@ def restructure_by_language(filename: str) -> dict:
             {'en': {'NATL': {'bacterioplankton': 'text'}},
              'sv': {'NATL': {'bacterioplankton': 'text'}}}
     """
-    data = _load_yaml(filename)
     result = defaultdict(lambda: defaultdict(dict))
 
     def walk(node, path):
@@ -74,7 +74,8 @@ def restructure_by_language(filename: str) -> dict:
 
 
 def get_static_metadata(filename: str, keys: list, lang: str = "en"):
-    metadata = restructure_by_language(filename)
+    data = _load_yaml(filename)
+    metadata = restructure_by_language(data)
     if metadata.get(lang):
         metadata = metadata.get(lang)
         for key in keys:
@@ -117,95 +118,66 @@ class DeliveryData:
     def __init__(
         self,
         data: pl.DataFrame | None = None,
-        path: str = "",
     ):
-        self._data = pl.DataFrame() if data is None else data
-        self.path = path
-        self._read_delivery_note(path)
-
-    def _read_delivery_note(
-        self,
-        path: str | pathlib.Path,
-        encoding: str = "cp1252",
-    ):
-        if "processed_data" not in [p for p in path.parent.iterdir() if p.is_dir()]:
-            delivery_path = path.parent / "processed_data" / "delivery_note.txt"
-
-        if not delivery_path.is_file():
-            msg = f"File is not a valid delivery_note text file: {delivery_path}"
-            raise FileNotFoundError(msg)
-
-        data = dict()
-        with open(delivery_path, encoding=encoding) as fid:
-            mapped_key = None
-            for line in fid:
-                if not line.strip():
-                    continue
-                if ":" not in line:
-                    # Belongs to previous row
-                    data[mapped_key] = f"{data[mapped_key]} {line.strip()}"
-                    continue
-                key, value = [item.strip() for item in line.split(":", 1)]
-                key = key.lstrip("- ")
-                data[key] = value
-                if key.upper() == "FORMAT":
-                    parts = [item.strip() for item in value.split(":")]
-                    data["data_format"] = parts[0]
-
-        self._delivery_note = data
+        # TODO: Kolla att alla relevanta fält finns i data
+        self._data = data if data is not None else pl.DataFrame()
 
     @property
     def data(self):
         return self._data
 
-    @property
-    def delivery_note(self):
-        return self._delivery_note
+    def _unique_values(self, column: str):
+        try:
+            return self.data[column].unique().to_list()
+        except pl.exceptions.ColumnNotFoundError as polars_error:
+            raise errors.MissingMetadataError(
+                f"Missing column '{column}'."
+            ) from polars_error
 
-    @property
-    def version(self):
-        print(str(self.path.parent))
-        return str(self.path.parent).split("/")[-1].split("_")[-1]
+    def _single_value(self, column: str):
+        unique_values = self._unique_values(column)
+        assert len(unique_values) == 1, (
+            f"Expected a single value for column {column}, got: {unique_values}"
+        )
+        return unique_values[0]
 
     @property
     def datatype(self):
-        dt = self.data["delivery_datatype"].unique().to_list()[0].replace(" and ", "")
-        return dt.lower()
+        return self._single_value("delivery_datatype").lower().replace(" and ", "")
 
     @property
     def project(self):
-        return self.data["sample_project_name_en"].unique().to_list()
+        return self._unique_values("sample_project_name_en")
 
     @property
     def monitoring_program_code(self):
-        return self.delivery_note.get("övervakningsprogram", "NA")
+        return self._single_value("monitoring_program_code")
+        # return self.delivery_note.get("övervakningsprogram", "NA")
+
+    @property
+    def version(self):
+        return self._single_value("version")
 
     @property
     def originator(self):
-        return self.data["reporting_institute_name_en"].unique().to_list()
+        return self._unique_values("reporting_institute_name_en")
 
     @property
     def orderer(self):
-        return self.data["sample_orderer_name_en"].unique().to_list()
+        return self._unique_values("sample_orderer_name_en")
 
     @property
     def dataset_name(self):
-        return self.data["dataset_name"].unique().to_list()
+        return self._unique_values("dataset_name")
 
     @property
     def fields(self):
         return self._fields
 
     def generate_readme(self):
-        return get_static_metadata(
-            "readme",
-            ["default"],
-            "en",
-        )
+        return get_static_metadata("readme", ["default"], "en")
 
     def generate_metadata(self):
-        print("\n".join(sorted(self._data.columns)))
-        print(self.project)
         return {
             "dataset_filename": self.dataset_name[
                 0
@@ -301,13 +273,3 @@ class DeliveryData:
                 lambda s: s.unique().to_list(), "scientific_name", self.data
             ),
         }
-
-    @classmethod
-    def from_path(cls, package_path: Path) -> Self:
-        data = pl.read_csv(
-            package_path, encoding="cp1252", separator="\t", infer_schema_length=10000
-        )
-        return cls(
-            data=data,
-            path=package_path,
-        )
