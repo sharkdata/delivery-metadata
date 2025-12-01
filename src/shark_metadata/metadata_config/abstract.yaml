@@ -1,0 +1,55 @@
+abstract:
+  initiated_by_nv_and_financed_by_hav:
+    en: >
+      The national monitoring program was initiated by the Swedish Environmental Protection Agency and is now financed
+      by the Swedish Agency for Marine and Water Management.
+  monitored_by_su_smhi_gu_uu:
+    en: >
+      Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg
+      University and Umeå University.
+  data_stored_in_shark:
+    en: >
+      Data are stored in the Swedish Ocean Archive database (SHARK), by the Swedish Meteorological and Hydrological
+      Institute.
+  data_analyzed_according_to_helom_combine:
+    en: >
+      Data are collected and analyzed according to the HELCOM COMBINE Manual - Part C Annex C6 Monitoring of
+      phytoplankton species composition, abundance and biomass
+      (https://www.helcom.fi/wp-content/uploads/2019/08/Guidelines-for-monitoring-phytoplankton-species-composition-abundance-and-biomass.pdf)
+      or similar methods.
+  phytoplankton_method_description:
+    en: >
+      For the purpose of quantitative studies in the open sea, the minimum requirement is to take an integrated sample
+      from 0 – 10 m depth using a hose (Lindahl 1986) or by pooling equal amounts of water collected from fixed depths
+      between 0 and 10 m using a water sampler (see Majaneva et al. 2009 for examples). The recommended sampling depths
+      are 0 – 1 m, 2.5 m, 5 m, 7.5 m and 10 m. […] It is recommended to take additional net samples from the water
+      column (e.g. from 0 – 20 m) in order to obtain concentrated phytoplankton samples.
+      (HELCOM COMBINE Manual https://www.helcom.fi/wp-content/uploads/2019/08/Guidelines-for-monitoring-phytoplankton-species-composition-abundance-and-biomass.pdf) 
+  data_collected_in_skagerrak_kattegatt_and_baltic_sea:
+    en: >
+      Data are collected within the following marine ecoregions: http://marineregions.org/mrgid/2401,
+      http://marineregions.org/mrgid/2374, http://marineregions.org/mrgid/2379.
+  keyword_thesaurus_reference:
+    en: >
+      GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml
+  phytoplankton_analysis_purpose:
+    en: >
+      In short, analysis of phytoplankton species composition, abundance and biomass is carried out for the following
+      purposes:
+      to describe temporal trends in phytoplankton species composition, phytoplankton abundance, biomass as well as the
+      intensity and occurrence of blooms;
+      to describe the spatial distribution of phytoplankton species;
+      to identify key phytoplankton species (e.g. dominating, harmful, potential non-indigenous and/or invasive species,
+      as well as indicator species);
+      to provide basic data for complex ecosystem analyses, food web studies, modelling as well as political and social
+      requirements such as indicators in the frame of the Marine Strategy Framework Directive of the European Union
+      (MSFD; European Union 2008) and the EU Water Framework Directive (WFD; European Union 2000) (HELCOM COMBINE Manual
+      https://www.helcom.fi/wp-content/uploads/2019/08/Guidelines-for-monitoring-phytoplankton-species-composition-abundance-and-biomass.pdf)
+  pyhtoplankton_reference:
+    en: >
+      Information about the program and the methods are also available in Swedish at
+      https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
+  phytoplankton_and_bloom_reference:
+    en: >
+      Information about the program and the methods are also available in Swedish at
+      https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/marin-miljoovervakning/vaxtplankton-bakterieplankton-och-blomning.htmlbenga

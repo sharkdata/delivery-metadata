@@ -2,7 +2,7 @@
 # Repository: https://github.com/sharkdata/metadata
 
 
-swedish_national_monitoring::
+swedish_national_monitoring:
   default:
       en: 
         - "Oceans > Marine Environment Monitoring"
