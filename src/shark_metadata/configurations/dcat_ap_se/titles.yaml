@@ -2,123 +2,123 @@
 # Repository: https://github.com/sharkdata/metadata
 ---
 titles:
-  NAT:
+  nat:
     bacterioplankton:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Bacterioplankton in Sweden since 1989.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av bakterioplankton i Sverige sedan 1989.
     chlorophyll:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Chlorophyll in Sweden since 1982.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av klorofyll i Sverige sedan 1982.
     epibenthos:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Epibenthos in Sweden since 1992.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av vegetationsklädda bottnar sedan 1992.
     greyseal:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Grey seal in Sweden since 1989.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av gråsäl i Sverige sedan 1989.
     harbourporpoise:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Harbour porpoise in Sweden.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av tumlare i Sverige.
     harbourseal:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Harbour seal in Sweden since 1988.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av knubbsäl i Sverige sedan 1988.
     phytoplankton:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Phytoplankton in Sweden since 1983.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av växtplankton i Sverige sedan 1983.
     primaryproduction:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Primary production in Sweden since 1979.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av primärproduktion i Sverige sedan 1979.
     profile:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of the pelagic with high resolution profiles in Sweden since 2018.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av pelagiealen med högupplösta profiler i Sverige sedan 2018.
     ringedseal:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Ringed seal in Sweden since 1995.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av vikare i Sverige sedan 1995.
     sealpathology:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Seal pathology in Sweden.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av patologi hos säl i Sverige.
     sedimentation:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Sedimentation in Sweden since 1982.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av sedimentation i Sverige sedan 1982.
     physicalchemical:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Physical and Chemical parameters in Sweden since 1893.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av fysiska och kemiska parametrar i Sverige sedan 1893.
     zoobenthos:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Zoobenthos in Sweden since 1971.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av mjukbottenfauna i Sverige sedan 1971.
     zooplankton:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Zooplankton in Sweden since 1979.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av djurplankton i Sverige sedan 1979.
     jellyfish:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Jellyfish in Sweden since 2007.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av geléplankton i Sverige sedan 2007.
     picoplankton:
-      en: >
+      en: >-
         SHARK - National marine environmental monitoring of Picoplankton in Sweden since 2002.
-      sv: >
+      sv: >-
         SHARK - Nationell marin miljöövervakning av picoplankton i Sverige sedan 2002.
-  NAT_REG:
+  nat_reg:
     picoplankton:
-      en: >
+      en: >-
         SHARK - National and regional marine environmental monitoring of Picoplankton in Sweden since 2002.
-      sv: >
+      sv: >-
         SHARK - Nationell och regional marin miljöövervakning av picoplankton i Sverige sedan 2002.
-  REG_PROJ:
+  reg_proj:
     epibenthos:
-      en: >
+      en: >-
         SHARK - Regional marine environmental monitoring and monitoring projects of Epibenthos in Sweden since 1994.
-      sv: >
+      sv: >-
         SHARK - Regional marin miljöövervakning samt andra övervakningsprojekt av vegetationsklädda bottnar i Sverige sedan 1994.
-  REG_RECIP_PROJ:
+  reg_recip_proj:
     phytoplankton:
-      en: >
+      en: >-
         SHARK - Regional marine environmental monitoring, recipient control and monitoring projects of Phytoplankton in Sweden since 1985.
-      sv: >
+      sv: >-
         SHARK - Regional marin miljöövervakning, recipientkontroll samt andra övervakningsprojekt av växtplankton i Sverige sedan 1985.
     zoobenthos:
-      en: >
+      en: >-
         SHARK - Regional marine environmental monitoring, recipient control and monitoring projects of Zoobenthos in Sweden since 1972.
-      sv: >
+      sv: >-
         SHARK - Regional marin miljöövervakning, recipientkontroll samt andra övervakningsprojekt av mjukbottenfauna i Sverige sedan 1972.
-  PROJ:
+  proj:
     planktonimaging:
-      en: >
+      en: >-
         SHARK - Phyto- and Microzooplankton Data Collected by Imaging FlowCytobots (IFCB) in Swedish and Adjacent Waters
-      sv: >
+      sv: >-
         SHARK - Växt- och mikrodjurplanktondata insamlad med Imaging FlowCytobots (IFCB) i svenska och närliggande vatten.
-    ADCP:
-      en: >
+    adcp:
+      en: >-
         SHARK - Ocean current data collected with ship mounted Acoustic Doppler Current Profiler (ADCP) in Swedish and Adjacent Waters
-      sv: >
+      sv: >-
         SHARK - Havsströmsdata insamlad med skeppsmonterad Acoustic Doppler Current Profiler (ADCP) i svenska och angränsande vatten.

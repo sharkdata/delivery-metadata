@@ -1,13 +1,13 @@
-import pathlib
-from collections import defaultdict
 from functools import cache
 from importlib import resources
 from pathlib import Path
-from typing import Callable, Self
+from typing import Callable
 
 import polars as pl
 import yaml
 from nodc_codes import get_translate_codes_object
+
+from shark_metadata import errors
 
 
 def _apply_on_column(function: Callable, column: str, dataframe: pl.DataFrame):
@@ -31,8 +31,13 @@ def build_parameter_unit_mapping(sub_df: pl.DataFrame):
 
 
 @cache
-def _load_yaml(filename: str) -> dict:
-    resource = Path(resources.files(__package__)) / "metadata_config" / f"{filename}.yaml"
+def _load_yaml(directory: str, filename: str) -> dict:
+    resource = (
+        Path(resources.files(__package__))
+        / "configurations"
+        / directory
+        / f"{filename}.yaml"
+    )
     if Path(resource).exists():
         with open(resource, encoding="utf-8") as f:
             return yaml.safe_load(f)
@@ -40,172 +45,88 @@ def _load_yaml(filename: str) -> dict:
         return {}
 
 
-def restructure_by_language(filename: str) -> dict:
-    """
-    Restructure the nested metadata dict so that 'en' and 'sv' become the top-level keys.
+def get_static_metadata(
+    filename: str,
+    keys: list,
+    language: str = "en",
+    directory: str = "shark_metadata_config",
+    fallback=False,
+):
+    data = _load_yaml(directory, filename)
+    for key in keys:
+        if value := data.get(key):
+            data = value
+        elif fallback:
+            data = data.get("default", {})
+        else:
+            return None
 
-    Example:
-        Input:
-            {'NATL': {'bacterioplankton': {'en': 'text', 'sv': 'text'}}}
-        Output:
-            {'en': {'NATL': {'bacterioplankton': 'text'}},
-             'sv': {'NATL': {'bacterioplankton': 'text'}}}
-    """
-    data = _load_yaml(filename)
-    result = defaultdict(lambda: defaultdict(dict))
-
-    def walk(node, path):
-        if isinstance(node, dict):
-            langs = {"en", "sv"} & node.keys()  # find intersection
-            if langs:
-                for lang in langs:
-                    # navigate to the correct nested location in result[lang]
-                    d = result[lang]
-                    for key in path[:-1]:
-                        d = d.setdefault(key, {})
-                    d[path[-1]] = node[lang]
-            else:
-                for k, v in node.items():
-                    walk(v, [*path, k])
-
-    walk(data, [])
-
-    return {lang: dict(result[lang]) for lang in result}
-
-
-def get_static_metadata(filename: str, keys: list, lang: str = "en"):
-    metadata = restructure_by_language(filename)
-    if metadata.get(lang):
-        metadata = metadata.get(lang)
-        for key in keys:
-            metadata = metadata.get(key) or metadata.get("default")
-            if metadata is None:
-                return "NA"
-    return metadata
+    if language in data:
+        return data[language]
+    elif fallback:
+        return data.get("en") or "NA"
+    return None
 
 
 class DeliveryData:
-    _fields = (
-        "datatype",
-        "monitoring_program",
-        "method_description",
-        "dataset_filename",
-        "keywords",
-        "measuring_area_type",
-        "coordinate_system",
-        "platform_class",
-        "license",
-        "min_year",
-        "max_year",
-        "min_date",
-        "max_date",
-        "min_longitude_dd",
-        "max_longitude_dd",
-        "min_latitude_dd",
-        "max_latitude_dd",
-        "stations",
-        "parameters",
-        "taxonomic_coverage",
-        "originator",
-        "orderer",
-        "data_holding_centre",
-        "database_reference",
-        "internet_access",
-        "citation",
-    )
-
     def __init__(
         self,
         data: pl.DataFrame | None = None,
-        path: str = "",
     ):
-        self._data = pl.DataFrame() if data is None else data
-        self.path = path
-        self._read_delivery_note(path)
-
-    def _read_delivery_note(
-        self,
-        path: str | pathlib.Path,
-        encoding: str = "cp1252",
-    ):
-        if "processed_data" not in [p for p in path.parent.iterdir() if p.is_dir()]:
-            delivery_path = path.parent / "processed_data" / "delivery_note.txt"
-
-        if not delivery_path.is_file():
-            msg = f"File is not a valid delivery_note text file: {delivery_path}"
-            raise FileNotFoundError(msg)
-
-        data = dict()
-        with open(delivery_path, encoding=encoding) as fid:
-            mapped_key = None
-            for line in fid:
-                if not line.strip():
-                    continue
-                if ":" not in line:
-                    # Belongs to previous row
-                    data[mapped_key] = f"{data[mapped_key]} {line.strip()}"
-                    continue
-                key, value = [item.strip() for item in line.split(":", 1)]
-                key = key.lstrip("- ")
-                data[key] = value
-                if key.upper() == "FORMAT":
-                    parts = [item.strip() for item in value.split(":")]
-                    data["data_format"] = parts[0]
-
-        self._delivery_note = data
+        # TODO: Kolla att alla relevanta fält finns i data
+        self._data = data if data is not None else pl.DataFrame()
 
     @property
     def data(self):
         return self._data
 
-    @property
-    def delivery_note(self):
-        return self._delivery_note
+    def _unique_values(self, column: str):
+        try:
+            return self.data[column].unique().to_list()
+        except pl.exceptions.ColumnNotFoundError as polars_error:
+            raise errors.MissingMetadataError(
+                f"Missing column '{column}'."
+            ) from polars_error
 
-    @property
-    def version(self):
-        print(str(self.path.parent))
-        return str(self.path.parent).split("/")[-1].split("_")[-1]
+    def _single_value(self, column: str):
+        unique_values = self._unique_values(column)
+        assert len(unique_values) == 1, (
+            f"Expected a single value for column {column}, got: {unique_values}"
+        )
+        return unique_values[0]
 
     @property
     def datatype(self):
-        dt = self.data["delivery_datatype"].unique().to_list()[0].replace(" and ", "")
-        return dt.lower()
+        return self._single_value("delivery_datatype").lower().replace(" and ", "")
 
     @property
     def project(self):
-        return self.data["sample_project_name_en"].unique().to_list()
+        return self._unique_values("sample_project_name_en")
 
     @property
     def monitoring_program_code(self):
-        return self.delivery_note.get("övervakningsprogram", "NA")
+        return self._single_value("monitoring_program_code")
+
+    @property
+    def version(self):
+        return self._single_value("version")
 
     @property
     def originator(self):
-        return self.data["reporting_institute_name_en"].unique().to_list()
+        return self._unique_values("reporting_institute_name_en")
 
     @property
     def orderer(self):
-        return self.data["sample_orderer_name_en"].unique().to_list()
+        return self._unique_values("sample_orderer_name_en")
 
     @property
     def dataset_name(self):
-        return self.data["dataset_name"].unique().to_list()
-
-    @property
-    def fields(self):
-        return self._fields
+        return self._unique_values("dataset_name")
 
     def generate_readme(self):
-        return get_static_metadata(
-            "readme",
-            ["default"],
-            "en",
-        )
+        return get_static_metadata("readme", ["default"], "en")
 
-    def generate_metadata(self):
-        print("\n".join(sorted(self._data.columns)))
-        print(self.project)
+    def generate_metadata(self, fallback=True):
         return {
             "dataset_filename": self.dataset_name[
                 0
@@ -215,12 +136,16 @@ class DeliveryData:
                 "delivery_datatype", self.datatype
             ),  # lista om metadata för flera paket från olika datatyper
             "monitoring_program": get_static_metadata(
-                "monitoring_program", [self.monitoring_program_code], "en"
+                "monitoring_program",
+                [self.monitoring_program_code],
+                "en",
+                fallback=fallback,
             ),  # lista om metadata skrivs för flera paket.
             "method_description": get_static_metadata(
                 "methods",
                 [self.monitoring_program_code, self.datatype],
                 "en",
+                fallback=fallback,
             ),
             "originator": {
                 "name": get_translate_codes_object().get_english_name(
@@ -241,22 +166,30 @@ class DeliveryData:
                 "LABO", self.orderer[0]
             ),
             "data_holding_centre": get_static_metadata(
-                "misc", ["data_holding_centre", "smhi"]
+                "misc",
+                ["data_holding_centre", "smhi"],
+                fallback=fallback,
             ),
             "database_reference": get_static_metadata(
                 "misc",
                 ["database_reference", self.datatype[0].lower()],
+                fallback=fallback,
             ),
             "internet_access": get_static_metadata(
                 "url_linkage",
                 ["shark", self.project[0], self.datatype[0].lower()],
+                fallback=fallback,
             )[0]["url"],  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
             "license": get_static_metadata(
-                "misc", ["license", self.datatype[0].lower()], "en"
+                "misc",
+                ["license", self.datatype[0].lower()],
+                "en",
+                fallback=fallback,
             ),  # license.yaml, flyttat till misc
             "citation": get_static_metadata(
                 "misc",
                 ["citation", self.datatype[0].lower()],
+                fallback=fallback,
             ).format(
                 originator=self.originator[0],
                 project=get_translate_codes_object().get_english_name(
@@ -267,16 +200,19 @@ class DeliveryData:
                 "keywords",
                 [self.monitoring_program_code, self.datatype[0].lower(), "gcmd"],
                 "en",
+                fallback=fallback,
             ),
             "measuring_area_type": get_static_metadata(
                 "misc",
                 ["measuring_area_type", self.datatype[0].lower()],
                 "en",
+                fallback=fallback,
             ),  # point, polygon, transect, annat namn?
             "coordinate_system": get_static_metadata(
                 "misc",
                 ["coordinate_system", self.datatype[0].lower()],
                 "en",
+                fallback=fallback,
             ),  # alltid wgs84
             "min_longitude_dd": _apply_on_column(min, "sample_longitude_dd", self.data),
             "max_longitude_dd": _apply_on_column(max, "sample_longitude_dd", self.data),
@@ -290,7 +226,10 @@ class DeliveryData:
                 lambda s: s.unique().to_list(), "station_name", self.data
             ),
             "platform_class": get_static_metadata(
-                "misc", ["platform_class", self.datatype[0].lower()], "en"
+                "misc",
+                ["platform_class", self.datatype[0].lower()],
+                "en",
+                fallback=fallback,
             ),
             "parameters": _apply_on_columns(
                 build_parameter_unit_mapping, ["parameter", "unit"], self.data
@@ -301,13 +240,3 @@ class DeliveryData:
                 lambda s: s.unique().to_list(), "scientific_name", self.data
             ),
         }
-
-    @classmethod
-    def from_path(cls, package_path: Path) -> Self:
-        data = pl.read_csv(
-            package_path, encoding="cp1252", separator="\t", infer_schema_length=10000
-        )
-        return cls(
-            data=data,
-            path=package_path,
-        )

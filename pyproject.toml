@@ -25,13 +25,21 @@ dev = [
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
     "polars>=1.34.0",
+    "sharkadm",
 ]
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
+
 
 [tool.uv]
 package = true
 
+
 [tool.uv.sources]
 nodc-codes = { git = "https://github.com/nodc-sweden/nodc-codes/", tag = "v2.0.0" }
+sharkadm = { git = "https://github.com/nodc-sweden/SHARKadm" }
 
 
 [tool.ruff]
