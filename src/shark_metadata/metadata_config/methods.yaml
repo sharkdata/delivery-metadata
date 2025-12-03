@@ -3,292 +3,237 @@
 
 # The | at the start indicates that the following should be interpreted as a string with \n when there is a new line. Blank line will be \n\n
 
-NATL:
-  bacterioplankton:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM COMBINE Manual - Part C Annex C11 Guidelines concerning bacterioplankton growth determination. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2019/08/Manual-for-Marine-Monitoring-in-the-COMBINE-Programme-of-HELCOM_PartC_AnnexC11.pdf
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bakteriell-syrekonsumtion.html
-    sv: |
-      Data ska samlas in och analyseras enligt HELCOM COMBINE Manual - Del C Bilaga C11 Riktlinjer för bestämning av bakterioplanktontillväxt, avvikelser från manualen kan förekomma.
-      
-      - HELCOM COMBINE Manual - Del C Bilaga C11: https://helcom.fi/wp-content/uploads/2019/08/Manual-for-Marine-Monitoring-in-the-COMBINE-Programme-of-HELCOM_PartC_AnnexC11.pdf
-      - Vägledning på Havs- och vattenmyndighetens webbplats: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bakteriell-syrekonsumtion.html
-  chlorophyll:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM Guidelines for Measuring Chlorophyll a.
-      
-      - https://helcom.fi/wp-content/uploads/2019/08/Guidelines-for-measuring-chlorophyll-a.pdf
-    sv: |
-      Data samlas in och analyseras enligt HELCOM Monitoring Guidelines for Measuring Chlorophyll a.
-      
-      - https://helcom.fi/wp-content/uploads/2019/08/Guidelines-for-measuring-chlorophyll-a.pdf
-  epibenthos:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management. However, deviations from the manual might occur.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html 
-      - East coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
-      - West coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats. Avvikelser från manualen kan förekomma.
-      
-      - Delprogrammet för vegetationsklädda bottnar: https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html
-      - Ostkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
-      - Västkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
-  greyseal:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/grasalsbestand.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/grasalsbestand.html
-  harbourporpoise:
-    en: |
-      The presence and distribution of Harbour porpoises are studied through recording click sounds with click detectors. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/marin-miljoovervakning/tumlare.html
-    sv: |
-      Förekomst och utbredning av tumlare övervakas genom att spela in klickljud med klickdetektorer. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/marin-miljoovervakning/tumlare.html
-  harbourseal:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
-  phytoplankton:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM Guidelines for monitoring of phytoplankton species composition, abundance and biomass. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
-    sv: |
-      Data samlas in och analyseras enligt HELCOM Guidelines of phytoplankton species composition, abundance and biomass. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf).
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
-  picoplankton:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM and OSPAR selected method in MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.ospar.org/documents?d=35398.
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-    sv: |
-      Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.ospar.org/documents?d=35398.
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-  primaryproduction:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/primarproduktion.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/primarproduktion.html
-  ringedseal:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
-  sealpathology:
-    en: |
-      Necropsy findings and histopathological findings of dead seals. If the exact position of the findings are not know, the position will be stored in the county town (according to the Swedish Environmental Protection Agency). Information about the program and the methods are available in Swedish at the website of the Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/overvakningsmanualer-for-miljoovervakning/overvakningsmanualer/patologi-hos-grasal-vikaresal-och-knubbsal.html
-    sv: |
-      Obduktionsfynd och histopatologiska fynd från döda sälar. Om den exakta fyndplatsen inte är känd kommer positionen att anges i residensstaden (enligt Naturvårdsverkets riktlinjer). Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/overvakningsmanualer-for-miljoovervakning/overvakningsmanualer/patologi-hos-grasal-vikaresal-och-knubbsal.html
-  sedimentation:
-    en: |
-      Sedimentation traps is put out for a number of days to store the material that settles down through the water. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sedimentation.html
-    sv: |
-      Sedimentationsfällor sätts ut under ett antal dagar för att samla upp det material som sjunker mot bottnen. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html,
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sedimentation.html
-  physicalchemical:
-    en: |
-      Oceanographic, physical and chemical data from water samples. Collected with bottle or CTD at discrete depths. Data should be sampled and analyzed according HELCOM Monitoring Guidelines. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.htmlhtml
-    sv: |
-      Data samlas in och analyseras enligt HELCOM Guidelines. Data samlas in med vattenhämtare och CTD. Vilka parametrar som analyseras varierar med plats och tid, som utgångspunkt finns salthalt, temperatur, syre och näringsämnen. Ytterligare parametrar som ofta förekommer är klorofyll, pH och alkalinitet. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats.
-      
-      - HELCOM Monitoring Guidelines: https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
-      - Vägledning från Havs- och vattenmyndigheten: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.html
-  profile:
-    en: |
-      text
-    sv: |
-      text
-  zoobenthos:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM and OSPAR selected method "Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö" Leonardsson K. 2004  Umeå universitet, Institutionen för ekologi och geovetenskap, 26 p (In Swedish). However, deviations from the manual might occur. Samples are often taken with a sediment graber that is lowered from a boat and collect a known amount of bottom substrate. The material is filtered and the animals present in the sample is preserved for later to be determined, counted and weighed. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html.
-      - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
-      
-    sv: |
-      Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: Leonardsson K., 2004.  Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö. Umeå universitet, Institutionen för ekologi och geovetenskap, 26 s. Avvikelser från manualen kan förekomma. Prover tas med en bottenhuggare som sänks ner från en båt och samlar upp en bestämd mängd bottensubstrat. Materialet silas och djuren i provet preserveras för att senare bestämmas, räknas och vägas. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html
-      - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
-  zooplankton:
-    en: |
-      Samples are collected by vertically hauling a plankton net through the water. Data should be sampled and analyzed according to the HELCOM Guidelines for Monitoring of Mesozooplankton. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/djurplankton-trend--och-omradesovervakning.html
-    sv: |
-      Prover samlas in genom att ett planktonnät dras vertikalt genom vattnet. Data samlas in och analyseras enligt HELCOM Guidelines for Monitoring of Mesozooplankton. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf.
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/djurplankton-trend--och-omradesovervakning.html
-  jellyfish:
-    en: |
-      Samples are collected by vertically hauling a plankton net through the water. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
-    sv: |
-      Prover samlas in genom att ett planktonnät dras vertikalt genom vattnet. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
-NAT_REG:
-  picoplankton:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM and OSPAR selected method in MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.ospar.org/documents?d=35398.
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-    sv: |
-      Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns på svenska på Havs- och vattenmyndighetens webbplats.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.ospar.org/documents?d=35398.
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
-REG_PROJ:
-  epibenthos:
-    en: |
-      Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management. However, deviations from the manual might occur.
-      
-      - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html 
-      - East coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
-      - West coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
-    sv: |
-      Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats. Avvikelser från manualen kan förekomma.
-      
-      - Delprogrammet för vegetationsklädda bottnar: https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html
-      - Ostkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
-      - Västkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
-REG_RECIP_PROJ:
-  phytoplankton:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM Guidelines for monitoring of phytoplankton species composition, abundance and biomass. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
-    sv: |
-      Data samlas in och analyseras enligt HELCOM Guidelines for monitoring of phytoplankton species composition, abundance and biomass. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på svenska på Havs- och vattenmyndighetens webbplats.
-      
-      - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
-  zoobenthos:
-    en: |
-      Data should be sampled and analyzed according to the HELCOM and OSPAR selected method "Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö" Leonardsson K. 2004  Umeå universitet, Institutionen för ekologi och geovetenskap, 26 p (In Swedish). However, deviations from the manual might occur. Samples are often taken with a sediment graber that is lowered from a boat and collect a known amount of bottom substrate. The material is filtered and the animals present in the sample is preserved for later to be determined, counted and weighed. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html.
-      - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
-      
-    sv: |
-      Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: Leonardsson K., 2004.  Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö. Umeå universitet, Institutionen för ekologi och geovetenskap, 26 s. Avvikelser från manualen kan förekomma. Prover tas med en bottenhuggare som sänks ner från en båt och samlar upp en bestämd mängd bottensubstrat. Materialet silas och djuren i provet preserveras för att senare bestämmas, räknas och vägas. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
-      
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
-      - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html
-      - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
-PROJ:
-  planktonimaging:
-    en: |
-      Sampling is performed either using shipboard flow through systems (i.e. FerryBox) where the Imaging FlowCytobot (IFCB) is connected as an addon, or at specific locations with the IFCB is submerged in-situ. Other deployment methods are possible.
-      The IFCB uses flow cytometry technology and high-resolution images to detects particles in a water sample. Shapes in images are identified to best possible taxonomical levels using AI-assisted image analysis software. Volumes are estimated from the organism's two-dimensional boundary.
-      In short, analysis of phyto- and microzooplankton species composition, abundance and biomass is carried out for the following purposes 
-      -	to describe temporal trends as well as the intensity and occurrence of blooms 
-      -	to describe the spatial distribution of species 
-      -	to identify key species (e.g. dominating, harmful, potential non-indigenous and/or invasive species, as well as indicator species) 
-      -	to provide basic data for complex ecosystem analyses, food web studies, modelling as well as for requirements in the frame of the Marine Strategy Framework Directive of the European Union (MSFD; European Union 2008) and the EU Water Framework Directive (WFD; European Union 2000) 
-      The analysis follows the methods provided
-      -	Machine learning: Sosik, H. M. and Olson, R. J. (2007), Automated taxonomic classification of phytoplankton sampled with imaging-in-flow cytometry. Limnol. Oceanogr: Methods 5, 204-216. http://github.com/hsosik/ifcb-analysis 
-      -	Quality control: Hayashi, K., Walton, J., Lie, A., Smith, J. and Kudela M. Using particle size distribution (PSD) to automate imaging flow cytobot (IFCB) data quality in coastal California, USA. In prep. http://github.com/kudelalab/PSD 
-      -	Data processing: Anders Torstensson (2024). I 'R' FlowCytobot (iRfcb): Tools for Analyzing and Processing Data from the IFCB. R package version 0.3.10. https://doi.org/10.5281/zenodo.12533225. http://github.com/EuropeanIFCBGroup/iRfcb 
-      In this dataset you will find data from Tångesund oceanographic platform, Swedish Skagerrak coast year 2016 (IFCB110), and from R/V Svea (https://vocab.nerc.ac.uk/collection/C17/current/77SE/) from year 2022 onwards (IFCB134). Other sampling platforms are possible.
 
-    sv: |
-      Provtagning sker antingen med hjälp av genomflödessystem på fartyg (t.ex. FerryBox) där Imaging Flowcytobot (IFCB) använder en del av flödet, eller på specifika platser in-situ där IFCB sänks ner i vattnet. Fler provtagningsmetoder är möjliga.
-      IFCB använder teknologi från flödescytometri samt högupplöst foto för att detektera partiklar i ett vattenprov. Partiklars former i bilderna identifieras till så noggrann taxonomisk nivå som möjligt (släkte- eller artnivå) med hjälp av AI, samt dess storlek och volym räknas ut med hjälp av mjukvara för bildanalys.
-      Analyser av biomassa, abundans och artsammansättning av växt- och mikrodjurplankton görs av följande anledningar:
-      - För att beskriva tidsmässiga trender samt förekomst av blomningar och dess intensitet
-      - För att beskriva arters rumsliga utbredning
-      - För att identifiera nyckelarter (t.ex. dominerande, skadliga, potentiellt främmande och/eller invasiva arter, samt indikatorarter)
-      - För att tillhandahålla grundläggande data för ekosystemanalyser, näringsvävsstudier, modellering, samt för åtaganden inom havsmiljödirektivet och vattendirektivet
-      Analysen följer dessa metoder:
-      - Maskininlärning: Sosik, H. M. and Olson, R. J. (2007), Automated taxonomic classification of phytoplankton sampled with imaging-in-flow cytometry. Limnol. Oceanogr: Methods 5, 204-216. http://github.com/hsosik/ifcb-analysis 
-      - Kvalitetskontroll: Hayashi, K., Walton, J., Lie, A., Smith, J. and Kudela M. Using particle size distribution (PSD) to automate imaging flow cytobot (IFCB) data quality in coastal California, USA. In prep. http://github.com/kudelalab/PSD 
-      - Dataprocessering: Anders Torstensson (2024). I 'R' FlowCytobot (iRfcb): Tools for Analyzing and Processing Data from the IFCB. R package version 0.3.10. https://doi.org/10.5281/zenodo.12533225. http://github.com/EuropeanIFCBGroup/iRfcb 
-      Data är insamlad från Tångesund oceanografiska plattform vid Orust på svenska kusten år 2016 (IFCB110), och från R/V Svea (https://vocab.nerc.ac.uk/collection/C17/current/77SE/) från år 2022 och framåt (IFCB134). Fler provtagningsplattformar är möjliga.
+bacterioplankton:
+  en: |
+    Data should be sampled and analyzed according to the HELCOM COMBINE Manual - Part C Annex C11 Guidelines concerning bacterioplankton growth determination. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://helcom.fi/wp-content/uploads/2019/08/Manual-for-Marine-Monitoring-in-the-COMBINE-Programme-of-HELCOM_PartC_AnnexC11.pdf
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bakteriell-syrekonsumtion.html
+  sv: |
+    Data ska samlas in och analyseras enligt HELCOM COMBINE Manual - Del C Bilaga C11 Riktlinjer för bestämning av bakterioplanktontillväxt, avvikelser från manualen kan förekomma.
+    
+    - HELCOM COMBINE Manual - Del C Bilaga C11: https://helcom.fi/wp-content/uploads/2019/08/Manual-for-Marine-Monitoring-in-the-COMBINE-Programme-of-HELCOM_PartC_AnnexC11.pdf
+    - Vägledning på Havs- och vattenmyndighetens webbplats: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bakteriell-syrekonsumtion.html
+chlorophyll:
+  en: |
+    Data should be sampled and analyzed according to the HELCOM Guidelines for Measuring Chlorophyll a.
+    
+    - https://helcom.fi/wp-content/uploads/2019/08/Guidelines-for-measuring-chlorophyll-a.pdf
+  sv: |
+    Data samlas in och analyseras enligt HELCOM Monitoring Guidelines for Measuring Chlorophyll a.
+    
+    - https://helcom.fi/wp-content/uploads/2019/08/Guidelines-for-measuring-chlorophyll-a.pdf
+epibenthos:
+  en: |
+    Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management. However, deviations from the manual might occur.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html 
+    - East coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
+    - West coast https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
+  sv: |
+    Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats. Avvikelser från manualen kan förekomma.
+    
+    - Delprogrammet för vegetationsklädda bottnar: https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-vegetationskladda-bottnar.html
+    - Ostkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-ostkust.html
+    - Västkust: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vegetationskladda-bottnar-vastkust.html
+greyseal:
+  en: |
+    Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/grasalsbestand.html
+  sv: |
+    Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/grasalsbestand.html
+harbourporpoise:
+  en: |
+    The presence and distribution of Harbour porpoises are studied through recording click sounds with click detectors. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/marin-miljoovervakning/tumlare.html
+  sv: |
+    Förekomst och utbredning av tumlare övervakas genom att spela in klickljud med klickdetektorer. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/marin-miljoovervakning/tumlare.html
+harbourseal:
+  en: |
+    Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
+  sv: |
+    Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
+phytoplankton:
+  en: |
+    Data should be sampled and analyzed according to the HELCOM Guidelines for monitoring of phytoplankton species composition, abundance and biomass. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
+  sv: |
+    Data samlas in och analyseras enligt HELCOM Guidelines of phytoplankton species composition, abundance and biomass. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf).
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/vaxtplankton.html
+picoplankton:
+  en: |
+    Data should be sampled and analyzed according to the HELCOM and OSPAR selected method in MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
+    - https://www.ospar.org/documents?d=35398.
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+  sv: |
+    Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: MacIsaac E A and Stockner J G 1993. Enumeration of phototrophic picoplankton by autoflourescence microscopy. In Handbook of methods in aquatic microbial ecology. Kemp P F, Sherr B F, Sherr E B, and Cole J J (eds.) Lewis, Boca Raton. pp. 187-197. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
+    - https://www.ospar.org/documents?d=35398.
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+primaryproduction:
+  en: |
+    Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/primarproduktion.html
+  sv: |
+    Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/primarproduktion.html
+ringedseal:
+  en: |
+    Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
+  sv: |
+    Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/hav/samordning--fakta/miljoovervakning/miljoovervakningens-programomrade-kust-och-hav/delprogram-sal-och-havsorn.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/bestand-av-knubbsal-och-vikaresal.html
+sealpathology:
+  en: |
+    Necropsy findings and histopathological findings of dead seals. If the exact position of the findings are not know, the position will be stored in the county town (according to the Swedish Environmental Protection Agency). Information about the program and the methods are available in Swedish at the website of the Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/overvakningsmanualer-for-miljoovervakning/overvakningsmanualer/patologi-hos-grasal-vikaresal-och-knubbsal.html
+  sv: |
+    Obduktionsfynd och histopatologiska fynd från döda sälar. Om den exakta fyndplatsen inte är känd kommer positionen att anges i residensstaden (enligt Naturvårdsverkets riktlinjer). Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/overvakningsmanualer-for-miljoovervakning/overvakningsmanualer/patologi-hos-grasal-vikaresal-och-knubbsal.html
+sedimentation:
+  en: |
+    Sedimentation traps is put out for a number of days to store the material that settles down through the water. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sedimentation.html
+  sv: |
+    Sedimentationsfällor sätts ut under ett antal dagar för att samla upp det material som sjunker mot bottnen. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html,
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sedimentation.html
+physicalchemical:
+  en: |
+    Oceanographic, physical and chemical data from water samples. Collected with bottle or CTD at discrete depths. Data should be sampled and analyzed according HELCOM Monitoring Guidelines. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.htmlhtml
+  sv: |
+    Data samlas in och analyseras enligt HELCOM Guidelines. Data samlas in med vattenhämtare och CTD. Vilka parametrar som analyseras varierar med plats och tid, som utgångspunkt finns salthalt, temperatur, syre och näringsämnen. Ytterligare parametrar som ofta förekommer är klorofyll, pH och alkalinitet. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats.
+    
+    - HELCOM Monitoring Guidelines: https://helcom.fi/action-areas/monitoring-and-assessment/monitoring-guidelines/
+    - Vägledning från Havs- och vattenmyndigheten: https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/miljoovervakningens-metoder-och-overvakningsmanualer-inom-programomrade-kust-och-hav.html
+#  profile:
+#    en: |
+#      text
+#    sv: |
+#      text
+zoobenthos:
+  en: |
+    Data should be sampled and analyzed according to the HELCOM and OSPAR selected method "Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö" Leonardsson K. 2004  Umeå universitet, Institutionen för ekologi och geovetenskap, 26 p (In Swedish). However, deviations from the manual might occur. Samples are often taken with a sediment graber that is lowered from a boat and collect a known amount of bottom substrate. The material is filtered and the animals present in the sample is preserved for later to be determined, counted and weighed. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html.
+    - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
+    
+  sv: |
+    Data samlas in och analyseras enligt riktlinjer från HELCOM och OSPAR: Leonardsson K., 2004.  Metodbeskrivning för provtagning och analys av mjukbottenlevande makroevertebrater i marin miljö. Umeå universitet, Institutionen för ekologi och geovetenskap, 26 s. Avvikelser från manualen kan förekomma. Prover tas med en bottenhuggare som sänks ner från en båt och samlar upp en bestämd mängd bottensubstrat. Materialet silas och djuren i provet preserveras för att senare bestämmas, räknas och vägas. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/mjukbottenlevande-makrofauna-trend--och-omradesovervakning.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/sediment---basundersokning.html
+    - https://www.havochvatten.se/download/18.1690613b166605675de898f4/1539942622449/rapport-umu-metodbeskrivning-provtagning-analys-mjukbottenlevande-makroevertebrater-i-marin-miljo.pdf
+zooplankton:
+  en: |
+    Samples are collected by vertically hauling a plankton net through the water. Data should be sampled and analyzed according to the HELCOM Guidelines for Monitoring of Mesozooplankton. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/djurplankton-trend--och-omradesovervakning.html
+  sv: |
+    Prover samlas in genom att ett planktonnät dras vertikalt genom vattnet. Data samlas in och analyseras enligt HELCOM Guidelines for Monitoring of Mesozooplankton. Avvikelser från manualen kan förekomma. Information om programmet och metoderna finns också på Havs- och vattenmyndighetens webbplats.
+    
+    - https://helcom.fi/wp-content/uploads/2020/01/HELCOM-Guidelines-for-monitoring-of-phytoplankton-species-composition-abundance-and-biomass.pdf.
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/djurplankton-trend--och-omradesovervakning.html
+jellyfish:
+  en: |
+    Samples are collected by vertically hauling a plankton net through the water. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
+  sv: |
+    Prover samlas in genom att ett planktonnät dras vertikalt genom vattnet. Information om programmet och metoderna finns på Havs- och vattenmyndighetens webbplats.
+    
+    - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
+    - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
+planktonimaging:
+  en: |
+    Sampling is performed either using shipboard flow through systems (i.e. FerryBox) where the Imaging FlowCytobot (IFCB) is connected as an addon, or at specific locations with the IFCB is submerged in-situ. Other deployment methods are possible.
+    The IFCB uses flow cytometry technology and high-resolution images to detects particles in a water sample. Shapes in images are identified to best possible taxonomical levels using AI-assisted image analysis software. Volumes are estimated from the organism's two-dimensional boundary.
+    In short, analysis of phyto- and microzooplankton species composition, abundance and biomass is carried out for the following purposes 
+    -	to describe temporal trends as well as the intensity and occurrence of blooms 
+    -	to describe the spatial distribution of species 
+    -	to identify key species (e.g. dominating, harmful, potential non-indigenous and/or invasive species, as well as indicator species) 
+    -	to provide basic data for complex ecosystem analyses, food web studies, modelling as well as for requirements in the frame of the Marine Strategy Framework Directive of the European Union (MSFD; European Union 2008) and the EU Water Framework Directive (WFD; European Union 2000) 
+    The analysis follows the methods provided
+    -	Machine learning: Sosik, H. M. and Olson, R. J. (2007), Automated taxonomic classification of phytoplankton sampled with imaging-in-flow cytometry. Limnol. Oceanogr: Methods 5, 204-216. http://github.com/hsosik/ifcb-analysis 
+    -	Quality control: Hayashi, K., Walton, J., Lie, A., Smith, J. and Kudela M. Using particle size distribution (PSD) to automate imaging flow cytobot (IFCB) data quality in coastal California, USA. In prep. http://github.com/kudelalab/PSD 
+    -	Data processing: Anders Torstensson (2024). I 'R' FlowCytobot (iRfcb): Tools for Analyzing and Processing Data from the IFCB. R package version 0.3.10. https://doi.org/10.5281/zenodo.12533225. http://github.com/EuropeanIFCBGroup/iRfcb 
+    In this dataset you will find data from Tångesund oceanographic platform, Swedish Skagerrak coast year 2016 (IFCB110), and from R/V Svea (https://vocab.nerc.ac.uk/collection/C17/current/77SE/) from year 2022 onwards (IFCB134). Other sampling platforms are possible.
 
-  ADCP:
-    en: |
-      The hull-mounted Acoustic Doppler Current Profiler (ADCP) measures the speed and direction of currents at multiple depths from the vessel to the seabed. The number of depth layers is determined by both the frequency of the ADCP and setup of the instrument. A vessel-mounted survey takes multiple current profile measurements at different points across a sailed track. Users can then see how the currents vary not only with depth, but across a geographic area.
-      In this dataset you will find data from R/V Svea in Skagerrak, Kattegat and the Baltic Sea from year 2022 onwards.
-      Sampling is performed using two separate transducers, RDI Teledyne Work Horse 600 kHz and RDI Teledyne Ocean Surveyor 150 kHz. The Work Horse uses depth cells of 2 meters, sampled from approximately -8 to -40 meters depth. The Ocean Surveyor uses depth cells of 8 meters, sampled from approximately -12 to -400 meters depth. The temporal average is 120 seconds for both sensors.
-      Processing and quality control are carried out using the CODAS software, version focal 20.04:
-      
-      - https://currents.soest.hawaii.edu/docs/adcp_doc/index.html
-    sv: |
-      Skrovmonterad Acoustic Doppler Current Profiler (ADCP) mäter hastighet och riktning på strömmarna på flera djup från fartygets undersida ner till havsbotten. Antalet djupceller bestäms av både frekvensen på ADCP och instrumentets inställningar. En undersökning med skrovmonterad ADCP tar många strömprofiler vid olika punkter längs en rutt. Användare kan sedan se hur strömmarna varierar inte bara med djup, utan också över ett geografiskt område.
-      I detta dataset hittar du data från R/V Svea i Skagerrak, Kattegatt och Östersjön från år 2022 och framåt.
-      Provtagning utförs med två separata sensorer, RDI Teledyne Work Horse 600 kHz och RDI Teledyne Ocean Surveyor 150 kHz. Work Horse använder djupceller på 2 meter, som samplas från cirka -8 till -40 meters djup. Ocean Surveyor använder djupceller på 8 meter, som samplas från cirka -12 till -400 meters djup. Det temporala medelvärdet är 120 sekunder för båda sensorerna.
-      Bearbetning och kvalitetskontroll utförs med hjälp av CODAS-programvaran, version focal 20.04:
-      
-      - https://currents.soest.hawaii.edu/docs/adcp_doc/index.html
-  planktonbarcoding:
-    en: |
-      text
-    sv: |
-      text
+  sv: |
+    Provtagning sker antingen med hjälp av genomflödessystem på fartyg (t.ex. FerryBox) där Imaging Flowcytobot (IFCB) använder en del av flödet, eller på specifika platser in-situ där IFCB sänks ner i vattnet. Fler provtagningsmetoder är möjliga.
+    IFCB använder teknologi från flödescytometri samt högupplöst foto för att detektera partiklar i ett vattenprov. Partiklars former i bilderna identifieras till så noggrann taxonomisk nivå som möjligt (släkte- eller artnivå) med hjälp av AI, samt dess storlek och volym räknas ut med hjälp av mjukvara för bildanalys.
+    Analyser av biomassa, abundans och artsammansättning av växt- och mikrodjurplankton görs av följande anledningar:
+    - För att beskriva tidsmässiga trender samt förekomst av blomningar och dess intensitet
+    - För att beskriva arters rumsliga utbredning
+    - För att identifiera nyckelarter (t.ex. dominerande, skadliga, potentiellt främmande och/eller invasiva arter, samt indikatorarter)
+    - För att tillhandahålla grundläggande data för ekosystemanalyser, näringsvävsstudier, modellering, samt för åtaganden inom havsmiljödirektivet och vattendirektivet
+    Analysen följer dessa metoder:
+    - Maskininlärning: Sosik, H. M. and Olson, R. J. (2007), Automated taxonomic classification of phytoplankton sampled with imaging-in-flow cytometry. Limnol. Oceanogr: Methods 5, 204-216. http://github.com/hsosik/ifcb-analysis 
+    - Kvalitetskontroll: Hayashi, K., Walton, J., Lie, A., Smith, J. and Kudela M. Using particle size distribution (PSD) to automate imaging flow cytobot (IFCB) data quality in coastal California, USA. In prep. http://github.com/kudelalab/PSD 
+    - Dataprocessering: Anders Torstensson (2024). I 'R' FlowCytobot (iRfcb): Tools for Analyzing and Processing Data from the IFCB. R package version 0.3.10. https://doi.org/10.5281/zenodo.12533225. http://github.com/EuropeanIFCBGroup/iRfcb 
+    Data är insamlad från Tångesund oceanografiska plattform vid Orust på svenska kusten år 2016 (IFCB110), och från R/V Svea (https://vocab.nerc.ac.uk/collection/C17/current/77SE/) från år 2022 och framåt (IFCB134). Fler provtagningsplattformar är möjliga.
+
+ADCP:
+  en: |
+    The hull-mounted Acoustic Doppler Current Profiler (ADCP) measures the speed and direction of currents at multiple depths from the vessel to the seabed. The number of depth layers is determined by both the frequency of the ADCP and setup of the instrument. A vessel-mounted survey takes multiple current profile measurements at different points across a sailed track. Users can then see how the currents vary not only with depth, but across a geographic area.
+    In this dataset you will find data from R/V Svea in Skagerrak, Kattegat and the Baltic Sea from year 2022 onwards.
+    Sampling is performed using two separate transducers, RDI Teledyne Work Horse 600 kHz and RDI Teledyne Ocean Surveyor 150 kHz. The Work Horse uses depth cells of 2 meters, sampled from approximately -8 to -40 meters depth. The Ocean Surveyor uses depth cells of 8 meters, sampled from approximately -12 to -400 meters depth. The temporal average is 120 seconds for both sensors.
+    Processing and quality control are carried out using the CODAS software, version focal 20.04:
+    
+    - https://currents.soest.hawaii.edu/docs/adcp_doc/index.html
+  sv: |
+    Skrovmonterad Acoustic Doppler Current Profiler (ADCP) mäter hastighet och riktning på strömmarna på flera djup från fartygets undersida ner till havsbotten. Antalet djupceller bestäms av både frekvensen på ADCP och instrumentets inställningar. En undersökning med skrovmonterad ADCP tar många strömprofiler vid olika punkter längs en rutt. Användare kan sedan se hur strömmarna varierar inte bara med djup, utan också över ett geografiskt område.
+    I detta dataset hittar du data från R/V Svea i Skagerrak, Kattegatt och Östersjön från år 2022 och framåt.
+    Provtagning utförs med två separata sensorer, RDI Teledyne Work Horse 600 kHz och RDI Teledyne Ocean Surveyor 150 kHz. Work Horse använder djupceller på 2 meter, som samplas från cirka -8 till -40 meters djup. Ocean Surveyor använder djupceller på 8 meter, som samplas från cirka -12 till -400 meters djup. Det temporala medelvärdet är 120 sekunder för båda sensorerna.
+    Bearbetning och kvalitetskontroll utförs med hjälp av CODAS-programvaran, version focal 20.04:
+    
+    - https://currents.soest.hawaii.edu/docs/adcp_doc/index.html
+#planktonbarcoding:
+#  en: |
+#    text
+#  sv: |
+#    text
 
 

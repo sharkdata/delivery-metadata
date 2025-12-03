@@ -1,124 +1,121 @@
 # Metadata for Swedish marine environmental monitoring datasets.
 # Repository: https://github.com/sharkdata/metadata
 ---
-laboratory:
-  NAT:
-    bacterioplankton:
-      en: >
-        Monitoring is performed by Umeå University.
-      sv: >
-        Övervakningen utförs av Umeå Universitet.
-    chlorophyll:
-      en: >
-        Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
-    epibenthos:
-      en: >
-        Monitoring is performed by Stockholm University, University of Gothenburg and Linnaeus University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Göteborgs universitet och Linnéuniversitetet.
-    greyseal:
-      en: >
-        Monitoring is performed by the Swedish Museum of Natural History.
-      sv: >
-        Övervakningen utförs av Naturhistoriska riksmuseet.
-    harbourporpoise:
-      en: >
-        Monitoring is performed by the Swedish Museum of Natural History.
-      sv: >
-        Övervakningen utförs av Naturhistoriska riksmuseet.
-    harbourseal:
-      en: >
-        Monitoring is performed by the Swedish Museum of Natural History.
-      sv: >
-        Övervakningen utförs av Naturhistoriska riksmuseet.
-    phytoplankton:
-      en: >
-        Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
-    picoplankton:
-      en: >
-        Monitoring is performed by Swedish Meteorological and Hydrological Institute and Umeå University.
-      sv: >
-        Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Umeå universitet.
-    primaryproduction:
-      en: >
-        Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
-  #  profile:
-  #    en: >
-  #      text
-  #    sv: >
-  #      text
-    ringedseal:
-      en: >
-        Monitoring is performed by the Swedish Museum of Natural History.
-      sv: >
-        Övervakningen utförs av Naturhistoriska riksmuseet.
-    sealpathology:
-      en: >
-        Monitoring is performed by the Swedish Museum of Natural History.
-      sv: >
-        Övervakningen utförs av Naturhistoriska riksmuseet.
-    sedimentation:
-      en: >
-        Monitoring is performed by Stockholm University och Umeå University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet and Umeå universitet.
-    physicalchemical:
-      en: >
-        Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
-    zoobenthos:
-      en: >
-        Monitoring is performed by Stockholm University, Gothenburg University, Umeå University and Linnaeus University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Göteborgs universitet, Umeå universitet och Linnéuniversitetet.
-    zooplankton:
-      en: >
-        Monitoring is performed by Stockholm University, Umeå University, Swedish Meteorological and Hydrological Institute and Gothenburg University.
-      sv: >
-        Övervakningen utförs av Stockholms universitet, Umeå universitet, Sveriges meteorologiska och hydrologiska institut och Göteborgs universitet.
-    jellyfish:
-      en: >
-        Monitoring is performed by Gothenburg University.
-      sv: >
-        Övervakningen utförs av Göteborgs universitet.
-  NAT_REG:
-    picoplankton:
-      en: >
-        Monitoring is performed by Swedish Meteorological and Hydrological Institute and Umeå University.
-      sv: >
-        Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Umeå universitet.
-  REG_PROJ:
-    epibenthos:
-      en: >
-        Monitoring is performed by Swedish universities and consulting firms.
-      sv: >
-        Övervakningen utförs av svenska universitet och konsultföretag.
-  REG_RECIP_PROJ:
-    phytoplankton:
-      en: >
-        Monitoring is performed by Swedish universities and consulting firms.
-      sv: >
-        Övervakningen utförs av svenska universitet och konsultföretag.
-    zoobenthos:
-      en: >
-        Monitoring is performed by Swedish universities, agencies and consulting firms.
-      sv: >
-        Övervakningen utförs av svenska universitet och konsultföretag.
-  PROJ:
-    planktonimaging:
-      en: >
-        Monitoring is performed by Swedish Meteorological and Hydrological Institute.
-      sv: >
-        Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut.
-    ADCP:
-      en: >
-        Monitoring is performed by Swedish Meteorological and Hydrological Institute.
-      sv: >
-        Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut.
+
+swedish_national_monitoring:
+  bacterioplankton:
+    en: >
+      Monitoring is performed by Umeå University.
+    sv: >
+      Övervakningen utförs av Umeå Universitet.
+  chlorophyll:
+    en: >
+      Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
+  epibenthos:
+    en: >
+      Monitoring is performed by Stockholm University, University of Gothenburg and Linnaeus University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Göteborgs universitet och Linnéuniversitetet.
+  greyseal:
+    en: >
+      Monitoring is performed by the Swedish Museum of Natural History.
+    sv: >
+      Övervakningen utförs av Naturhistoriska riksmuseet.
+  harbourporpoise:
+    en: >
+      Monitoring is performed by the Swedish Museum of Natural History.
+    sv: >
+      Övervakningen utförs av Naturhistoriska riksmuseet.
+  harbourseal:
+    en: >
+      Monitoring is performed by the Swedish Museum of Natural History.
+    sv: >
+      Övervakningen utförs av Naturhistoriska riksmuseet.
+  phytoplankton:
+    en: >
+      Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
+  picoplankton:
+    en: >
+      Monitoring is performed by Swedish Meteorological and Hydrological Institute and Umeå University.
+    sv: >
+      Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Umeå universitet.
+  primaryproduction:
+    en: >
+      Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
+#  profile:
+#    en: >
+#      text
+#    sv: >
+#      text
+  ringedseal:
+    en: >
+      Monitoring is performed by the Swedish Museum of Natural History.
+    sv: >
+      Övervakningen utförs av Naturhistoriska riksmuseet.
+  sealpathology:
+    en: >
+      Monitoring is performed by the Swedish Museum of Natural History.
+    sv: >
+      Övervakningen utförs av Naturhistoriska riksmuseet.
+  sedimentation:
+    en: >
+      Monitoring is performed by Stockholm University och Umeå University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet and Umeå universitet.
+  physicalchemical:
+    en: >
+      Monitoring is performed by Stockholm University, Swedish Meteorological and Hydrological Institute, Gothenburg University and Umeå University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Sveriges meteorologiska och hydrologiska institut, Göteborgs universitet och Umeå universitet.
+  zoobenthos:
+    en: >
+      Monitoring is performed by Stockholm University, Gothenburg University, Umeå University and Linnaeus University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Göteborgs universitet, Umeå universitet och Linnéuniversitetet.
+  zooplankton:
+    en: >
+      Monitoring is performed by Stockholm University, Umeå University, Swedish Meteorological and Hydrological Institute and Gothenburg University.
+    sv: >
+      Övervakningen utförs av Stockholms universitet, Umeå universitet, Sveriges meteorologiska och hydrologiska institut och Göteborgs universitet.
+  jellyfish:
+    en: >
+      Monitoring is performed by Gothenburg University.
+    sv: >
+      Övervakningen utförs av Göteborgs universitet.
+other_monitoring:
+  picoplankton:
+    en: >
+      Monitoring is performed by Swedish Meteorological and Hydrological Institute and Umeå University.
+    sv: >
+      Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Umeå universitet.
+  epibenthos:
+    en: >
+      Monitoring is performed by Swedish universities and consulting firms.
+    sv: >
+      Övervakningen utförs av svenska universitet och konsultföretag.
+  phytoplankton:
+    en: >
+      Monitoring is performed by Swedish universities and consulting firms.
+    sv: >
+      Övervakningen utförs av svenska universitet och konsultföretag.
+  zoobenthos:
+    en: >
+      Monitoring is performed by Swedish universities, agencies and consulting firms.
+    sv: >
+      Övervakningen utförs av svenska universitet och konsultföretag.
+  planktonimaging:
+    en: >
+      Monitoring is performed by Swedish Meteorological and Hydrological Institute.
+    sv: >
+      Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut.
+  ADCP:
+    en: >
+      Monitoring is performed by Swedish Meteorological and Hydrological Institute.
+    sv: >
+      Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut.
