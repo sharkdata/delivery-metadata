@@ -3,7 +3,11 @@
 
 # The | at the start indicates that the following should be interpreted as a string with \n when there is a new line. Blank line will be \n\n
 
-
+default:
+  en: |
+    Data should be sampled and analyzed according to the governing organizations (HELCOM, OSPAR, Swedish Agency for Marine and Water Management, others) selected methods. 
+  sv: |
+    Data ska samlas in och analyseras enligt styrande organisationers (HELCOM, OSPAR, Havs- och vattenmyndigheten, andra) utvalda metoder.
 bacterioplankton:
   en: |
     Data should be sampled and analyzed according to the HELCOM COMBINE Manual - Part C Annex C11 Guidelines concerning bacterioplankton growth determination. However, deviations from the manual might occur. Information about the program and the methods are available in Swedish at the website of Swedish Agency for Marine and Water Management.

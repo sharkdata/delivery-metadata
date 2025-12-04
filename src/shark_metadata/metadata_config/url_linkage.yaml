@@ -205,7 +205,7 @@ smhi_open_data:
         https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-vaxt-och-mikrodjurplanktondata-insamlad-med-imaging-flowcytobots-ifcb-i-svenska-och-narliggande-vatten
       sv: >
         https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-vaxt-och-mikrodjurplanktondata-insamlad-med-imaging-flowcytobots-ifcb-i-svenska-och-narliggande-vatten
-    ADCP:
+    adcp:
       en: >
         https://www.smhi.se/data/sok-oppna-data-i-utforskaren/shark-havsstromsdata-insamlad-med-skeppsmonterad-acoustic-doppler-current-profiler-adcp-i-svenska-och-angransande-vatten
       sv: >

@@ -2,57 +2,59 @@
 # Repository: https://github.com/sharkdata/metadata
 ---
 
-license:
-  default:
-    en:
-      The data complies with the Creative commons CC0 license terms. 
-      https://creativecommons.org/publicdomain/zero/1.0/deed.sv
-    sv:
-      Data följer licensvillkoren Creative commons CC0. 
-      https://creativecommons.org/publicdomain/zero/1.0/deed.sv
-data_holding_centre:
-  smhi:
-    en:
-      name: Swedish Meteorological and Hydrological Institute
-      address: Göteborgseskaderns plats 3
-      postal_code: SE-421 71
-      city: Västra Frölunda
-      phone: +46-11-495 80 00
-      email: shark@smhi.se
-    sv:
-      namn: Sveriges meteorologiska och hydrologiska institut
-      adress: Göteborgseskaderns plats 3
-      postnummer: 421 71
-      postort: Västra Frölunda
-      tel: +46-11-495 80 00
-      e-post: shark@smhi.se
-  default:
-    name: 
-      en:
-        Swedish Meteorological and Hydrological Institute 
-      sv:
-        Sveriges meteorologiska och hydrologiska institute
-    address: 
-      en:
-        Göteborgseskaderns plats 3
-    postal_code: 
-      en:
-        SE-421 71
-    city: 
-      en:
-        Västra Frölunda
-    phone: 
-      en:
-        +46-11-495 80 00
-    email: 
-      en:
-        shark@smhi.se
-database_reference:
-  default:
-    en:
-      SHARK - Swedish Ocean Archive, National Oceanographic Data Centre
-    sv:
-      SHARK - Svenskt havsarkiv, nationellt oceanografiskt datacenter
+#license: använd license.yaml istället
+#  default:
+#    en:
+#      The data complies with the Creative commons CC0 license terms. 
+#      https://creativecommons.org/publicdomain/zero/1.0/deed.sv
+#    sv:
+#      Data följer licensvillkoren Creative commons CC0. 
+#      https://creativecommons.org/publicdomain/zero/1.0/deed.sv
+
+#data_holding_centre: använd data_holding_centre.yaml istället
+#  smhi:
+#    en:
+#      name: Swedish Meteorological and Hydrological Institute
+#      address: Göteborgseskaderns plats 3
+#      postal_code: SE-421 71
+#      city: Västra Frölunda
+#      phone: +46-11-495 80 00
+#      email: shark@smhi.se
+#    sv:
+#      namn: Sveriges meteorologiska och hydrologiska institut
+#      adress: Göteborgseskaderns plats 3
+#      postnummer: 421 71
+#      postort: Västra Frölunda
+#      tel: +46-11-495 80 00
+#      e-post: shark@smhi.se
+#  default:
+#    name: 
+#      en:
+#        Swedish Meteorological and Hydrological Institute 
+#      sv:
+#        Sveriges meteorologiska och hydrologiska institute
+#    address: 
+#      en:
+#        Göteborgseskaderns plats 3
+#    postal_code: 
+#      en:
+#        SE-421 71
+#    city: 
+#      en:
+#        Västra Frölunda
+#    phone: 
+#      en:
+#        +46-11-495 80 00
+#    email: 
+#      en:
+#        shark@smhi.se
+#database_reference:
+#  default:
+#    en:
+#      SHARK - Swedish Ocean Archive, National Oceanographic Data Centre
+#    sv:
+#      SHARK - Svenskt havsarkiv, nationellt oceanografiskt datacenter
+
 measuring_area_type:
   default: 
     en:
@@ -81,10 +83,10 @@ platform_class:
       aircraft
     sv:
       luftfartyg
-citation: 
-  # vad finns det för nya tankar?
-  # datum för skapande, leverantör, ackreditering, år (min, max), datatyp
-  default: 
-    en: |
-      The data was collected within the project/program '{project}' and has been downloaded from the Swedish National Oceanographic Data Centre at the Swedish Meteorological and Hydrological Institute (SMHI). Data has been collected within Swedish coordinated marine monitoring by {originator}.
+#citation: använd data_holding_centre.yaml istället
+#  # vad finns det för nya tankar?
+#  # datum för skapande, leverantör, ackreditering, år (min, max), datatyp
+#  default: 
+#    en: |
+#      The data was collected within the project/program '{project}' and has been downloaded from the Swedish National Oceanographic Data Centre at the Swedish Meteorological and Hydrological Institute (SMHI). Data has been collected within Swedish coordinated marine monitoring by {originator}.
 

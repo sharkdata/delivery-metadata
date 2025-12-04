@@ -2,7 +2,17 @@
 # Repository: https://github.com/sharkdata/metadata
 ---
 
+default:
+  en: >
+    Monitoring is performed by Swedish universities, government agencies, consulting firms and museums.
+  sv: >
+    Övervakningen utförs av svenska universitet, myndigheter, konsultföretag och museum.
 swedish_national_monitoring:
+  default:
+    en: >
+      Monitoring is performed by Swedish universities, government agencies and museums.
+    sv: >
+      Övervakningen utförs av svenska universitet, myndigheter och museum.
   bacterioplankton:
     en: >
       Monitoring is performed by Umeå University.
@@ -89,6 +99,11 @@ swedish_national_monitoring:
     sv: >
       Övervakningen utförs av Göteborgs universitet.
 other_monitoring:
+  default:
+    en: >
+      Monitoring is performed by Swedish universities, government agencies, consulting firms and museums.
+    sv: >
+      Övervakningen utförs av svenska universitet, myndigheter, konsultföretag och museum.
   picoplankton:
     en: >
       Monitoring is performed by Swedish Meteorological and Hydrological Institute and Umeå University.
@@ -106,15 +121,15 @@ other_monitoring:
       Övervakningen utförs av svenska universitet och konsultföretag.
   zoobenthos:
     en: >
-      Monitoring is performed by Swedish universities, agencies and consulting firms.
+      Monitoring is performed by Swedish universities, government agencies and consulting firms.
     sv: >
-      Övervakningen utförs av svenska universitet och konsultföretag.
+      Övervakningen utförs av svenska universitet, myndigheter och konsultföretag.
   planktonimaging:
     en: >
       Monitoring is performed by Swedish Meteorological and Hydrological Institute.
     sv: >
       Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut.
-  ADCP:
+  adcp:
     en: >
       Monitoring is performed by Swedish Meteorological and Hydrological Institute.
     sv: >
