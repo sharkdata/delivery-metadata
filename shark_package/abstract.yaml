@@ -3,28 +3,28 @@
 ---
 
   # delivery_note: övervakningsprogram
-abstract:
-  NATL: 
+monitoring_program_code_description:
+  natl: 
     en: >
       National monitoring data from the seas surrounding Sweden.
     sv: >
       Data från nationell miljöövervakning i haven runt Sverige.
-  REG: 
+  reg: 
     en: >
       Regional monitoring data from the seas surrounding Sweden.
     sv: >
       Data från regional miljöövervakning i haven runt Sverige.
-  RECIP: 
+  recip: 
     en: >
       Recipient control monitoring data from the seas surrounding Sweden.
     sv: >
       Data från recipientkontroll i haven runt Sverige.
-  SRECIP: 
+  srecip: 
     en: >
       Coordinated recipient monitoring from the seas surrounding Sweden.
     sv: >
       Data från samlad recipientkontroll i haven runt Sverige.
-  PROJ: 
+  proj: 
     en: >
       Project data from the seas surrounding Sweden.
     sv: >
