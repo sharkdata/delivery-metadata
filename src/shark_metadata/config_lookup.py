@@ -1,3 +1,6 @@
+from importlib import resources
+from pathlib import Path
+
 from shark_metadata.delivery_data import get_static_metadata
 
 _file_map = {
@@ -12,3 +15,7 @@ def get_reference(key: str, language: str = "en"):
         filename, root_key = file_parts
         return get_static_metadata(filename, [root_key, *keys], language=language)
     return None
+
+
+def get_config_directory() -> Path:
+    return Path(resources.files(__package__)) / "metadata_config"
