@@ -10,6 +10,7 @@ dependencies = [
     "click>=8.3.0",
     "nodc-codes",
     "pyyaml>=6.0.3",
+    "polars>=1.34.0",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
@@ -24,7 +25,6 @@ dev = [
     "ruff>=0.14.0",
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
-    "polars>=1.34.0",
     "sharkadm",
 ]
 

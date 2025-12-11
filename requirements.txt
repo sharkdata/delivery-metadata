@@ -329,6 +329,7 @@ polars==1.35.1 \
     --hash=sha256:c29a933f28aa330d96a633adbd79aa5e6a6247a802a720eead9933f4613bdbf4
     # via
     #   nodc-station
+    #   shark-metadata
     #   sharkadm
 polars-runtime-32==1.35.1 \
     --hash=sha256:35cde9453ca7032933f0e58e9ed4388f5a1e415dd0db2dd1e442c81d815e630c \
