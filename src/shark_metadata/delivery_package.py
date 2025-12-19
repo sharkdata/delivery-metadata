@@ -2,6 +2,7 @@ import zipfile
 from pathlib import Path
 from typing import Self
 
+import pandas as pd
 import polars as pl
 
 from shark_metadata import errors
@@ -23,6 +24,33 @@ class DeliveryPackage:
     @property
     def data(self) -> pl.DataFrame:
         return self._data.with_columns(pl.lit(self.version).alias("version"))
+
+    @property
+    def enriched_data(self) -> pl.DataFrame:
+        df = self.data.clone()
+        print(self.delivery_note["övervakningsprogram"])
+        if "monitoring_program_code" in df.columns:
+            # Replace nulls with delivery_note value
+            df = df.with_columns(
+                [
+                    pl.col("monitoring_program_code").fill_null(
+                        pl.lit(
+                            self.delivery_note["övervakningsprogram"].lower(),
+                            dtype=pl.Utf8,
+                        )
+                    )
+                ]
+            )
+        else:
+            # Column doesn't exist → add it
+            df = df.with_columns(
+                [
+                    pl.lit(
+                        self.delivery_note["övervakningsprogram"].lower(), dtype=pl.Utf8
+                    ).alias("monitoring_program_code")
+                ]
+            )
+        return df
 
     @property
     def delivery_note(self) -> dict:
@@ -52,10 +80,10 @@ class DeliveryPackage:
 
     @classmethod
     def from_directory(cls, delivery_path: Path, encoding="cp1252") -> Self:
-        shark_data_path = delivery_path / "shark_data.txt"
+        shark_data_path = delivery_path / "processed_data" / "data.txt"
         if not shark_data_path.exists():
             raise errors.MissingFileError(
-                f"Could not find 'shark_data.txt' in {delivery_path.name}"
+                f"Could not find 'data.txt' in {delivery_path}/processed_data"
             )
 
         data = pl.read_csv(
@@ -81,9 +109,9 @@ class DeliveryPackage:
                 f"Could not find 'shark_data.txt' in {zip_path.name}"
             )
 
-        data = pl.read_csv(
-            archive.open("shark_data.txt"), separator="\t", infer_schema=False
-        )
+        with archive.open("shark_data.txt") as f:
+            pdf = pd.read_csv(f, sep="\t", encoding="cp1252")
+        data = pl.from_pandas(pdf)
 
         if "processed_data/delivery_note.txt" not in archive.namelist():
             raise errors.MissingFileError(
@@ -100,3 +128,10 @@ class DeliveryPackage:
             zip_path,
             raw_delivery_note,
         )
+
+
+if __name__ == "__main__":
+    DP = DeliveryPackage.from_zip(
+        Path("../Testdata/3. Zippar/SHARK_Phytoplankton_2023_SMHI_version_2025-03-09.zip")
+    )
+    print(DP.enriched_data["monitoring_program_code"].head())

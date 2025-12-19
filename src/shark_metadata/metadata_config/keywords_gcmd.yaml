@@ -1,8 +1,9 @@
 # Metadata for Swedish marine environmental monitoring datasets.
+# key is program code
 # Repository: https://github.com/sharkdata/metadata
 
 
-swedish_national_monitoring:
+natl:
   default:
       en: 
         - "Oceans > Marine Environment Monitoring"
@@ -162,7 +163,7 @@ swedish_national_monitoring:
         - "Oceans > Marine Environment Monitoring"
         - "Oceans > Marine Biology"
         - "Oceans > Marine Invertebrates"
-other_monitoring:
+default:
   default:
       en: 
         - "Oceans > Marine Environment Monitoring"

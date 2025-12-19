@@ -6,7 +6,7 @@
 # originator_contact:
 # delivery_note: kontaktperson men hur ska vi göra? funktionsmail bäst
 # info based on, orginiator, discipline, language
-SMHI: 
+smhi: 
   default: 
     en: 
       shark@smhi.se

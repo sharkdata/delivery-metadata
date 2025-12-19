@@ -122,78 +122,31 @@ class DeliveryData:
         return get_static_metadata("readme", ["default"], "en")
 
     def generate_metadata(self, fallback=True):
+        print(self.datatype.lower())
         return {
-            "dataset_filename": self.dataset_name[
-                0
-            ],  # lista om metadata skrivs för flera paket.
-            "version": self.version,
             "datatype": get_translate_codes_object().get_english_name(
                 "delivery_datatype", self.datatype
-            ),  # lista om metadata för flera paket från olika datatyper
+            ),
             "monitoring_program": get_static_metadata(
                 "monitoring_program",
                 [self.monitoring_program_code],
                 "en",
                 fallback=fallback,
             ),  # lista om metadata skrivs för flera paket.
+            "dataset_filename": self.dataset_name[
+                0
+            ],  # lista om metadata skrivs för flera paket.
+            "version": self.version,
+            # lista om metadata för flera paket från olika datatyper
             "method_description": get_static_metadata(
                 "methods",
-                [self.monitoring_program_code, self.datatype],
+                [self.datatype],
                 "en",
                 fallback=fallback,
             ),
-            "originator": {
-                "name": get_translate_codes_object().get_english_name(
-                    "LABO", self.originator[0]
-                ),
-                "contact": get_static_metadata(
-                    "originator_contact",
-                    [
-                        get_translate_codes_object().get_internal_value(
-                            "LABO", self.originator[0]
-                        ),
-                        self.datatype[0],
-                    ],
-                    "en",
-                ),
-            },  # lista med flera dicts om flera datapaket läses.
-            "orderer": get_translate_codes_object().get_english_name(
-                "LABO", self.orderer[0]
-            ),
-            "data_holding_centre": get_static_metadata(
-                "misc",
-                ["data_holding_centre", "smhi"],
-                fallback=fallback,
-            ),
-            "database_reference": get_static_metadata(
-                "misc",
-                ["database_reference", self.datatype[0].lower()],
-                fallback=fallback,
-            ),
-            "internet_access": get_static_metadata(
-                "url_linkage",
-                ["shark", self.project[0], self.datatype[0].lower()],
-                fallback=fallback,
-            )[0]["url"],  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
-            "license": get_static_metadata(
-                "misc",
-                ["license", self.datatype[0].lower()],
-                "en",
-                fallback=fallback,
-            ),  # license.yaml, flyttat till misc
-            "citation": get_static_metadata(
-                "misc",
-                ["citation", self.datatype[0].lower()],
-                fallback=fallback,
-            ).format(
-                originator=self.originator[0],
-                project=get_translate_codes_object().get_english_name(
-                    "project", self.project[0]
-                ),
-            ),
-            "gcmd_science_keywords": get_static_metadata(
-                "keywords",
-                [self.monitoring_program_code, self.datatype[0].lower(), "gcmd"],
+            "keywords": get_static_metadata(
+                "keywords_gcmd",
+                [self.monitoring_program_code, self.datatype.lower()],
                 "en",
                 fallback=fallback,
             ),
@@ -217,21 +170,82 @@ class DeliveryData:
             "max_year": _apply_on_column(max, "visit_year", self.data),
             "min_date": _apply_on_column(min, "sample_date", self.data),
             "max_date": _apply_on_column(max, "sample_date", self.data),
-            "stations": _apply_on_column(
-                lambda s: s.unique().to_list(), "station_name", self.data
-            ),
             "platform_class": get_static_metadata(
                 "misc",
                 ["platform_class", self.datatype[0].lower()],
                 "en",
                 fallback=fallback,
             ),
+            "stations": _apply_on_column(
+                lambda s: s.unique().to_list(), "station_name", self.data
+            ),
             "parameters": _apply_on_columns(
                 build_parameter_unit_mapping, ["parameter", "unit"], self.data
             ),
-            # Do we need a transformer to get the column scientific_name?
-            # Do we want reported or a transformed column?
             "taxonomic_coverage": _apply_on_column(
                 lambda s: s.unique().to_list(), "scientific_name", self.data
+            ),
+            "originator": {
+                "name": get_translate_codes_object().get_english_name(
+                    "LABO", self.originator[0]
+                ),
+                "contact": get_static_metadata(
+                    "originator_contact",
+                    [
+                        "smhi",
+                        self.datatype[0],
+                    ],
+                    "en",
+                    fallback=fallback,
+                ),
+            },  # lista med flera dicts om flera datapaket läses.
+            "orderer": get_translate_codes_object().get_english_name(
+                "LABO", self.orderer[0]
+            ),
+            "data_holding_centre": get_static_metadata(
+                "data_holding_centre",
+                ["data_holding_centre", "smhi"],
+                fallback=fallback,
+            ),
+            "database_reference": get_static_metadata(
+                "data_holding_centre",
+                ["database_reference", "default"],
+                fallback=fallback,
+            ),
+            "internet_access": {
+                get_static_metadata(
+                    "url_linkage",
+                    ["shark", self.project[0], self.datatype[0].lower()],
+                    fallback=fallback,
+                )[0]["title"]: get_static_metadata(
+                    "url_linkage",
+                    ["shark", self.project[0], self.datatype[0].lower()],
+                    fallback=fallback,
+                )[0]["url"],
+                get_static_metadata(
+                    "url_linkage",
+                    ["shark", self.project[0], self.datatype[0].lower()],
+                    fallback=fallback,
+                )[1]["title"]: get_static_metadata(
+                    "url_linkage",
+                    ["shark", self.project[0], self.datatype[0].lower()],
+                    fallback=fallback,
+                )[1]["url"],
+            },  # url linkage,  shark.smhi.se, shark.smhi.se/api/docs
+            "license": get_static_metadata(
+                "license",
+                ["license"],
+                "en",
+                fallback=fallback,
+            ),
+            "citation": get_static_metadata(  # ha med citation, vad i så fall?
+                "misc",
+                ["citation", self.datatype[0].lower()],
+                fallback=fallback,
+            ).format(
+                originator=self.originator[0],
+                project=get_translate_codes_object().get_english_name(
+                    "project", self.project[0]
+                ),
             ),
         }
