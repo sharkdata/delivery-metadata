@@ -6,32 +6,32 @@
 # info based on, MPROG, language
 default:
   en: 
-    Monitoring data from the seas surrounding Sweden from unspecified programme or project.
+    Monitoring data from the seas surrounding Sweden from unspecified programme or project
   sv: 
     Data från miljöövervakning i haven runt Sverige från okänt programm eller projekt
 natl: 
   en: 
-    National monitoring data from the seas surrounding Sweden.
+    National monitoring data from the seas surrounding Sweden
   sv: 
-    Data från nationell miljöövervakning i haven runt Sverige.
+    Data från nationell miljöövervakning i haven runt Sverige
 reg: 
   en: 
-    Regional monitoring data from the seas surrounding Sweden.
+    Regional monitoring data from the seas surrounding Sweden
   sv: 
-    Data från regional miljöövervakning i haven runt Sverige.
+    Data från regional miljöövervakning i haven runt Sverige
 recip: 
   en: 
-    Recipient control monitoring data from the seas surrounding Sweden.
+    Recipient control monitoring data from the seas surrounding Sweden
   sv: 
-    Data från recipientkontroll i haven runt Sverige.
+    Data från recipientkontroll i haven runt Sverige
 srecip: 
   en: 
-    Coordinated recipient monitoring from the seas surrounding Sweden.
+    Coordinated recipient monitoring from the seas surrounding Sweden
   sv: 
-    Data från samlad recipientkontroll i haven runt Sverige.
+    Data från samlad recipientkontroll i haven runt Sverige
 proj: 
   en: 
-    Project data from the seas surrounding Sweden.
+    Project data from the seas surrounding Sweden
   sv: 
-    Data från miljöövervakningsprojekt i haven runt Sverige.
+    Data från miljöövervakningsprojekt i haven runt Sverige
 

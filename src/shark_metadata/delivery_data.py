@@ -144,7 +144,7 @@ class DeliveryData:
                 "en",
                 fallback=fallback,
             ),
-            "keywords": get_static_metadata(
+            "keywords_gcmd": get_static_metadata(
                 "keywords_gcmd",
                 [self.monitoring_program_code, self.datatype.lower()],
                 "en",
@@ -212,12 +212,12 @@ class DeliveryData:
                 ["database_reference", "default"],
                 fallback=fallback,
             ),
-            "internet_access": {
+            "access_interfaces": {
                 get_static_metadata(
                     "url_linkage",
                     ["shark", self.project[0], self.datatype[0].lower()],
                     fallback=fallback,
-                )[0]["title"]: get_static_metadata(
+                )[0]["short_name"]: get_static_metadata(
                     "url_linkage",
                     ["shark", self.project[0], self.datatype[0].lower()],
                     fallback=fallback,
@@ -226,7 +226,7 @@ class DeliveryData:
                     "url_linkage",
                     ["shark", self.project[0], self.datatype[0].lower()],
                     fallback=fallback,
-                )[1]["title"]: get_static_metadata(
+                )[1]["short_name"]: get_static_metadata(
                     "url_linkage",
                     ["shark", self.project[0], self.datatype[0].lower()],
                     fallback=fallback,

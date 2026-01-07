@@ -4,11 +4,22 @@ shark:
     default:
       en:
       - url: "http://shark.smhi.se/en/"
+        description: "SHARK - Swedish Ocean Archive, access oceanographic and marine biological data."
+        title: "Web interface"
+        short_name: "web_interface"
+      - url: "https://shark.smhi.se/api/docs/"
+        description: "SHARK - Swedish Ocean Archive, access oceanographic and marine biological data."
+        title: "API"
+        short_name: "api"
+      sv:
+      - url: "http://shark.smhi.se/en/"
         description: "SHARK är Svenskt HavsARKivs webbplats för nedladdning av data."
         title: "SHARK"
+        short_name: "web_interface"
       - url: "https://shark.smhi.se/api/docs/"
         description: "SHARK API är Svenskt HavsARKivs API för avancerad nedladdning av data."
         title: "SHARK API"
+        short_name: "api"
 gbif:
   swedish_national_monitoring:
     zoobenthos:
