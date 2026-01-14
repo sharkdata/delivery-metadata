@@ -15,6 +15,7 @@ default:
     The zip-file contains:
     - File "shark_data.txt": This is the published data product (tab-separated text file)
     - File "shark_metadata.json": Gives an overview and description of the dataset and the terms of use. Describes the contents of the zip-file in English and Swedish. 
+    - File "readme.txt": 
     - Folder "received_data": Contains one or multiple original data files from the data deliverer (e.g. semi-colon delimited, tab-delimited or xml files), followed by supplementary files from the data deliverer with relevant information for the delivered data (in different formats such as pdf).
     - Folder "processed_data": Contains one or multiple edited data files (e.g. semi-colon separated csv-, txt- or xlm-format), with corrected data (e.g. corrected codes, species, and station name) and adapted to the SHARK data handling system, a delivery_note.txt where the provider of the data describes the content of the delivered data and sometimes a change_log.txt file that specifies changes made by the Swedish National data host in the data review process.
     
@@ -22,14 +23,14 @@ default:
   sv: |
     Denna databas innehåller marin miljöövervakningsdata som levererats till datavärden SMHI.
 
-    #Ta bort nedan rad? Vad betyder detta egentligen stämmer inte?
-    Filerna är ordnade efter Övervakningsår/Datatyp/Dataleverantör enligt LABO-kod/Versionsnummer enligt datum. 
+    Namnet på zip-filen inleds alltid med SHARK_ och följer sedan strukturen: datatyp_år_leverantör
     
     Datapaket är komprimerade i zip-format.
     
     Zip-filen innehåller:
-    - Filen "shark_data.txt". Detta är den publiserade dataprodukten (tabbavgränsad textfil).
+    - Filen "shark_data.txt". Detta är den publicerade dataprodukten (tabbavgränsad textfil).
     - Filen "shark_metadata.json". Ger en översikt och beskrivning av data, samt villkor för användning. Beskriver innehållet i zip-filen både på engelska och på svenska.
+    - Filen "readme.txt":
     - Mappen "received_data". Innehåller en eller flera levererade datafiler från dataleverantören (kan vara semikolonseparerat, tabbavgränsade, Excel-filer eller xml-filer), samt medföljande filer från leverantören (i olika format som t.ex. pdf) som anses vara relevant tillsammans med levererade data.
     - Mappen "processed_data". Innehåller en eller flera redigerade datafiler (kan vara semikolonseparerat, tabbavgränsade eller xml-filer), som är korrigerad (t.ex. koder, arter och stationsnamn) och anpassad till SHARKs datahanteringssystem, en delivery_note.txt där dataleverantören visar vad dataleveransen innehåller, en analyse_info.txt där information om analyserna presenteras, en sampling_info.txt där information om provtagningen presenteras och ibland en change_log.txt fil som dokumenterar förändringar gjorda av datavärden under leveranskontroll och databearbetning.
     

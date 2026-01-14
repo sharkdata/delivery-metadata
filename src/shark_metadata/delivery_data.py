@@ -119,7 +119,9 @@ class DeliveryData:
         return self._unique_values("dataset_name")
 
     def generate_readme(self):
-        return get_static_metadata("readme", ["default"], "en")
+        english = get_static_metadata("readme", ["default"], "en")
+        swedish = get_static_metadata("readme", ["default"], "sv")
+        return f"{'='*25}ENGLISH{'='*25}\n{english}\n{'='*25}SWEDISH{'='*25}\n{swedish}"
 
     def generate_metadata(self, fallback=True):
         print(self.datatype.lower())
