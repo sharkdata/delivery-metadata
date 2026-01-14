@@ -7,31 +7,30 @@
 
 default: 
   en: |
-    This database contains marine environmental monitoring data delivered to the Swedish National data host for oceanographic and marine biological environmental data
+    Swedish Ocean Archive (SHARK) contains marine environmental monitoring data delivered to the Swedish national data host for oceanographic and marine biological environmental data. SHARK is hosted by the Swedish Meteorological and Hydrological Institute.
     
     Data packages are compressed to zip-format. 
-    Name of the zip-file always starts with SHARK_ and then follows the structure: datatype_year_deliverer
+    Name of the zip-file always starts with SHARK_ and then follows the structure: datatype_year_deliverer.
     
     The zip-file contains:
-    - File "shark_data.txt": This is the published data product (tab-separated text file)
-    - File "shark_metadata.json": Gives an overview and description of the dataset and the terms of use. Describes the contents of the zip-file in English and Swedish. 
-    - File "readme.txt": 
-    - Folder "received_data": Contains one or multiple original data files from the data deliverer (e.g. semi-colon delimited, tab-delimited or xml files), followed by supplementary files from the data deliverer with relevant information for the delivered data (in different formats such as pdf).
-    - Folder "processed_data": Contains one or multiple edited data files (e.g. semi-colon separated csv-, txt- or xlm-format), with corrected data (e.g. corrected codes, species, and station name) and adapted to the SHARK data handling system, a delivery_note.txt where the provider of the data describes the content of the delivered data and sometimes a change_log.txt file that specifies changes made by the Swedish National data host in the data review process.
+    - File "shark_data.txt": This is the published data product (tab-separated text file).
+    - File "shark_metadata.json": Gives an overview and description of the dataset and the terms of use.
+    - File "readme.txt": Describes the contents of the zip-file in English and Swedish.
+    - Folder "received_data": Contains one or multiple original data files from the data deliverer (e.g. semi-colon delimited, tab-delimited, xlsx or xml files), followed by supplementary files from the data deliverer with relevant information for the delivered data (in different formats such as pdf).
+    - Folder "processed_data": Contains one or multiple edited data files (e.g. semi-colon separated csv-, txt- or xlm-format), with corrected data (e.g. corrected codes, species, and station name) and adapted to the SHARK data handling system, a delivery_note.txt where the provider of the data describes the content of the delivered data, and sometimes a change_log.txt file that specifies changes made by the Swedish National data host in the data review process. Where applicable, analysis details are available in analysis_info.txt, and sampling details in sampling_info.txt.
     
-    Data reporting guide and code descriptions used by the Swedish National data host (in Swedish language) is available here http://www.smhi.se/data/hav-och-havsmiljo/datavardskap-oceanografi-och-marinbiologi 
+    A data reporting guide (in Swedish) is available here http://www.smhi.se/data/hav-och-havsmiljo/datavardskap-oceanografi-och-marinbiologi 
   sv: |
-    Denna databas innehåller marin miljöövervakningsdata som levererats till datavärden SMHI.
+    Svenskt havsarkiv (SHARK) innehåller marin miljöövervakningsdata som levererats till den svenska datavärden för oceanografisk och marinbiologisk data. SHARK förvaltas av SMHI. 
 
-    Namnet på zip-filen inleds alltid med SHARK_ och följer sedan strukturen: datatyp_år_leverantör
-    
-    Datapaket är komprimerade i zip-format.
+    Datapaketen komprimeras i zip-format.
+    Namnet på zip-filen inleds alltid med SHARK_ och följer sedan strukturen: datatyp_år_leverantör.
     
     Zip-filen innehåller:
-    - Filen "shark_data.txt". Detta är den publicerade dataprodukten (tabbavgränsad textfil).
-    - Filen "shark_metadata.json". Ger en översikt och beskrivning av data, samt villkor för användning. Beskriver innehållet i zip-filen både på engelska och på svenska.
-    - Filen "readme.txt":
-    - Mappen "received_data". Innehåller en eller flera levererade datafiler från dataleverantören (kan vara semikolonseparerat, tabbavgränsade, Excel-filer eller xml-filer), samt medföljande filer från leverantören (i olika format som t.ex. pdf) som anses vara relevant tillsammans med levererade data.
-    - Mappen "processed_data". Innehåller en eller flera redigerade datafiler (kan vara semikolonseparerat, tabbavgränsade eller xml-filer), som är korrigerad (t.ex. koder, arter och stationsnamn) och anpassad till SHARKs datahanteringssystem, en delivery_note.txt där dataleverantören visar vad dataleveransen innehåller, en analyse_info.txt där information om analyserna presenteras, en sampling_info.txt där information om provtagningen presenteras och ibland en change_log.txt fil som dokumenterar förändringar gjorda av datavärden under leveranskontroll och databearbetning.
+    - Filen "shark_data.txt": Detta är den publicerade dataprodukten (tabbavgränsad textfil).
+    - Filen "shark_metadata.json": Ger en översikt och beskrivning av data, samt villkor för användning.
+    - Filen "readme.txt": Beskriver innehållet i zip-filen både på engelska och på svenska.
+    - Mappen "received_data": Innehåller en eller flera levererade datafiler från dataleverantören (kan vara semikolonseparerat, tabbavgränsade, xlsx- eller xml-filer), samt medföljande filer från leverantören (i olika format som t.ex. pdf) som anses vara relevant tillsammans med levererade data.
+    - Mappen "processed_data": Innehåller en eller flera redigerade datafiler (kan vara semikolonseparerat, tabbavgränsade eller xml-filer), som är korrigerad (t.ex. koder, arter och stationsnamn) och anpassad till SHARKs datahanteringssystem, en delivery_note.txt där dataleverantören visar vad dataleveransen innehåller och ibland en change_log.txt fil som dokumenterar förändringar gjorda av datavärden under leveranskontroll och databearbetning. I förekommande fall presenteras detaljerad information om analyser i analyse_info.txt, samt provtagningsdetaljer i sampling_info.txt. 
     
-    Här finns en guide för inrapportering av data, inklusive kodbeskrivningar använda inom datavärdskapet. http://www.smhi.se/data/hav-och-havsmiljo/datavardskap-oceanografi-och-marinbiologi
+    Här finns en guide för datarapportering http://www.smhi.se/data/hav-och-havsmiljo/datavardskap-oceanografi-och-marinbiologi
