@@ -1,3 +1,4 @@
+import json
 from functools import cache
 from importlib import resources
 from pathlib import Path
@@ -70,6 +71,14 @@ class DeliveryData:
     ):
         # TODO: Kolla att alla relevanta fält finns i data
         self._data = data if data is not None else pl.DataFrame()
+
+    def save(self, path: Path):
+        metadata = self.generate_metadata()
+        readme = self.generate_readme()
+        with open(path / "shark_metadata.json", "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=2, ensure_ascii=False)
+        with open(path / "readme.txt", "w", encoding="utf-8") as f:
+            f.write(readme)
 
     @property
     def data(self):
