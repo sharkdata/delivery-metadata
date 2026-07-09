@@ -23,14 +23,14 @@ misc:
         fartyg
     greyseal: 
       en: >
-        airplane
+        aircraft
       sv: >
-        flygplan
+        luftfartyg
     ringedseal: 
       en: >
-        airplane
+        aircraft
       sv: >
-        flygplan
+        luftfartyg
   citation: 
     # vad finns det för nya tankar?
     default: 

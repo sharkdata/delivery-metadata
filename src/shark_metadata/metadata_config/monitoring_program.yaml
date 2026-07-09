@@ -1,0 +1,36 @@
+# Metadata for Swedish marine environmental monitoring datasets.
+# Repository: https://github.com/sharkdata/metadata
+---
+
+# delivery_note: MPROG
+# info based on, MPROG, language
+default:
+  en: 
+    Monitoring data from the seas surrounding Sweden from unspecified programme or project.
+  sv: 
+    Data från miljöövervakning i haven runt Sverige från okänt programm eller projekt
+NATL: 
+  en: 
+    National monitoring data from the seas surrounding Sweden.
+  sv: 
+    Data från nationell miljöövervakning i haven runt Sverige.
+REG: 
+  en: 
+    Regional monitoring data from the seas surrounding Sweden.
+  sv: 
+    Data från regional miljöövervakning i haven runt Sverige.
+RECIP: 
+  en: 
+    Recipient control monitoring data from the seas surrounding Sweden.
+  sv: 
+    Data från recipientkontroll i haven runt Sverige.
+SRECIP: 
+  en: 
+    Coordinated recipient monitoring from the seas surrounding Sweden.
+  sv: 
+    Data från samlad recipientkontroll i haven runt Sverige.
+PROJ: 
+  en: 
+    Project data from the seas surrounding Sweden.
+  sv: 
+    Data från miljöövervakningsprojekt i haven runt Sverige.
