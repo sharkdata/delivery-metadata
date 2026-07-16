@@ -277,3 +277,33 @@ keywords:
             "Oceans > Ocean Circulation > Ocean Currents",
             "Oceans > Ocean Circulation > Ocean Currents > Current Profiles"
           ]
+    marinebiotoxins:
+      gcmd:
+        en: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology",
+            "Oceans > Harmful Algal Bloom (HABs)",
+            "Oceans > Toxin Concentration"
+          ]
+        sv: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology",
+            "Oceans > Harmful Algal Bloom (HABs)",
+            "Oceans > Toxin Concentration"
+          ]
+    historicplankton:
+      gcmd:
+        en: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology"
+          ]
+        sv: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology"
+          ]
+
+      

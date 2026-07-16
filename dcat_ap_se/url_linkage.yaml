@@ -210,6 +210,14 @@ url_linkage:
         - url: "https://shark.smhi.se/api/docs/"
           description: "SHARK API är Svenskt HavsARKivs API för avancerad nedladdning av data."
           title: "SHARK API"
+    historicplankton:
+      sv:
+        - url: "http://shark.smhi.se/"
+          description: "SHARK är Svenskt HavsARKivs webbplats för nedladdning av data."
+          title: "SHARK"
+        - url: "https://shark.smhi.se/api/docs/"
+          description: "SHARK API är Svenskt HavsARKivs API för avancerad nedladdning av data."
+          title: "SHARK API"
   smhi_open_data:
     NAT:
       bacterioplankton:
