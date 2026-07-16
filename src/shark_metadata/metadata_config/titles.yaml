@@ -88,6 +88,11 @@ titles:
         SHARK - National marine environmental monitoring of Picoplankton in Sweden since 2002.
       sv: >-
         SHARK - Nationell marin miljöövervakning av picoplankton i Sverige sedan 2002.
+    microzooplankton:
+      en: >-
+        SHARK - National marine environmental monitoring of Microzooplankton in Sweden since 2018
+      sv: >-
+        SHARK - Nationell marin miljöövervakning av mikrodjurplankton i Sverige sedan 2018
   NAT_REG:
     picoplankton:
       en: >-

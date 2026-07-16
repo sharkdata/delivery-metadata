@@ -98,6 +98,11 @@ swedish_national_monitoring:
       Monitoring is performed by Gothenburg University.
     sv: >
       Övervakningen utförs av Göteborgs universitet.
+  microzooplankton:
+    en: >
+      Monitoring is performed by Swedish Meteorological and Hydrological Institute and Gothenburg University.
+    sv: >
+      Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Göteborgs universitet.
 other_monitoring:
   default:
     en: >
