@@ -217,6 +217,11 @@ methods:
         - https://www.havochvatten.se/overvakning-och-uppfoljning/miljoovervakning/organisation-och-programomraden/miljoovervakningens-programomrade-kust-och-hav/delprogram-fria-vattenmassan.html
         \n
         - https://www.havochvatten.se/vagledning-foreskrifter-och-lagar/vagledningar/ovriga-vagledningar/undersokningstyper-for-miljoovervakning/undersokningstyper/geleplankton.html
+    microzooplankton:
+      en: >
+        text
+      sv: >
+        text
   NAT_REG:
     picoplankton:
       en: >

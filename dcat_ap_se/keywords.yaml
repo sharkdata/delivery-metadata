@@ -248,6 +248,18 @@ keywords:
             "Oceans > Marine Biology",
             "Oceans > Marine Invertebrates"
           ]
+    microzooplankton:
+      gcmd:
+        en: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology"
+          ]
+        sv: >
+          [
+            "Oceans > Marine Environment Monitoring",
+            "Oceans > Marine Biology"
+          ]
   PROJ:
     planktonimaging:
       gcmd:

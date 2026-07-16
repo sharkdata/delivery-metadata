@@ -88,6 +88,11 @@ laboratory:
         Monitoring is performed by Gothenburg University.
       sv: >
         Övervakningen utförs av Göteborgs universitet.
+    microzooplankton:
+      en: >
+        Monitoring is performed by Swedish Meteorological and Hydrological Institute and Gothenburg University.
+      sv: >
+        Övervakningen utförs av Sveriges meteorologiska och hydrologiska institut och Göteborgs universitet.
   NAT_REG:
     picoplankton:
       en: >
