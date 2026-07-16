@@ -140,6 +140,17 @@ url_linkage:
         - url: "http://www.gbif.se/ipt/resource?r=shark-harbour-porpoise-nat"
           description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
           title: "GBIF ipt"
+    microzooplankton:
+      sv:
+        - url: "http://shark.smhi.se/"
+          description: "SHARK är Svenskt HavsARKivs webbplats för nedladdning av data."
+          title: "SHARK"
+        - url: "https://shark.smhi.se/api/docs/"
+          description: "SHARK API är Svenskt HavsARKivs API för avancerad nedladdning av data."
+          title: "SHARK API"
+        - url: "http://www.gbif.se/ipt/resource?r=shark-harbour-porpoise-nat"
+          description: "Global Biodiversity Information Facility GBIF-Sweden, portalen för fri tillgång till data om biologisk mångfald."
+          title: "GBIF ipt"
 
   REG_PROJ:
     epibenthos:
